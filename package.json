@@ -1,0 +1,8 @@
+{
+  "name": "policyready",
+  "version": "1.0.0",
+  "description": "PolicyReady.org — IDD Residential Provider P&P Manuals",
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
