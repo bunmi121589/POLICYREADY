@@ -3,420 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PolicyReady.org — P&P Manuals for IDD Residential Providers</title>
-  <meta name="description" content="State-specific Policy & Procedure Manuals for IDD residential providers — host homes, developmental homes, family living, and foster care facilities. 8 states available. $150. Instant Word download.">
+  <title>PolicyReady.org — Health Care Policy & Procedure Manuals</title>
+  <meta name="description" content="Policy & Procedure Manuals built to actual regulations, agencies, and background check systems specific to your state. Download in minutes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --green:      #1A4731;
-      --green-mid:  #2D6A4A;
-      --green-lt:   #E4EDE7;
-      --amber:      #B86C1C;
-      --amber-dk:   #9A5916;
-      --paper:      #F9F7F4;
-      --white:      #FFFFFF;
-      --ink:        #161C18;
-      --ink-mid:    #3D4840;
-      --ink-lt:     #6B7870;
-      --border:     #D4DDD7;
-      --tag-bg:     #EBF3EE;
-      --tag-text:   #1A4731;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      height: 64px;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.08);
-    }
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      text-decoration: none;
-      letter-spacing: -0.01em;
-    }
-    .nav-logo span { color: #8FD4A8; }
-    .nav-btn {
-      background: var(--amber);
-      color: #FFFFFF;
-      border: none;
-      padding: 9px 20px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.15s;
-    }
-    .nav-btn:hover { background: var(--amber-dk); }
-
-    /* ── HERO ── */
-    .hero {
-      background: var(--green);
-      color: white;
-      padding: 80px 5% 88px;
-      text-align: center;
-    }
-    .hero-eyebrow {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #8FD4A8;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 700;
-      line-height: 1.2;
-      max-width: 760px;
-      margin: 0 auto 20px;
-    }
-    .hero p {
-      font-size: clamp(1rem, 1.8vw, 1.15rem);
-      color: rgba(255,255,255,0.78);
-      max-width: 580px;
-      margin: 0 auto 36px;
-      line-height: 1.65;
-    }
-    .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--amber);
-      color: white;
-      padding: 14px 32px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-    .btn-primary:hover { background: var(--amber-dk); }
-    .btn-ghost {
-      background: transparent;
-      color: rgba(255,255,255,0.85);
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.25);
-      cursor: pointer;
-      transition: border-color 0.15s, color 0.15s;
-    }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: white; }
-
-    /* ── STATES STRIP ── */
-    .states-strip {
-      background: var(--green-mid);
-      padding: 14px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .states-strip span {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.65);
-      margin-right: 4px;
-    }
-    .state-pill {
-      background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.9);
-      border-radius: 100px;
-      padding: 4px 12px;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    }
-
-    /* ── SECTIONS ── */
-    section { padding: 72px 5%; }
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 12px;
-    }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      font-weight: 700;
-      color: var(--green);
-      line-height: 1.25;
-      margin-bottom: 16px;
-    }
-    .section-sub {
-      font-size: 1.05rem;
-      color: var(--ink-mid);
-      max-width: 600px;
-      line-height: 1.65;
-      margin-bottom: 48px;
-    }
-
-    /* ── WHAT'S INSIDE ── */
-    .inside-section { background: var(--white); }
-    .inside-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .inside-card {
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--paper);
-    }
-    .inside-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--green-lt);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 16px;
-      font-size: 1.2rem;
-    }
-    .inside-card h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--green);
-      margin-bottom: 8px;
-    }
-    .inside-card p {
-      font-size: 0.9rem;
-      color: var(--ink-mid);
-      line-height: 1.6;
-    }
-
-    /* ── STATES GRID ── */
-    .states-section { background: var(--paper); }
-    .states-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .state-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-    .state-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--green);
-    }
-    .state-name {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--green);
-      margin-bottom: 4px;
-    }
-    .state-setting {
-      font-size: 0.85rem;
-      color: var(--ink-mid);
-      margin-bottom: 14px;
-      line-height: 1.4;
-    }
-    .cite-badge {
-      display: inline-block;
-      background: var(--tag-bg);
-      color: var(--tag-text);
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 4px;
-      letter-spacing: 0.04em;
-    }
-    .state-editions {
-      margin-top: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .edition-tag {
-      font-size: 0.78rem;
-      color: var(--ink-lt);
-      padding-left: 14px;
-      position: relative;
-    }
-    .edition-tag::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--amber);
-    }
-
-    /* ── WHO IT'S FOR ── */
-    .who-section { background: var(--green-lt); }
-    .who-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .who-card {
-      background: var(--white);
-      border-radius: 10px;
-      padding: 28px;
-      border: 1px solid var(--border);
-    }
-    .who-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--green);
-      margin-bottom: 10px;
-    }
-    .who-card p {
-      font-size: 0.9rem;
-      color: var(--ink-mid);
-      line-height: 1.65;
-    }
-
-    /* ── PRICE SECTION ── */
-    .price-section {
-      background: var(--white);
-      text-align: center;
-    }
-    .price-box {
-      display: inline-block;
-      background: var(--green);
-      color: white;
-      border-radius: 16px;
-      padding: 48px 56px;
-      max-width: 560px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .price-amount {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .price-desc {
-      color: rgba(255,255,255,0.75);
-      font-size: 0.95rem;
-      margin-bottom: 28px;
-      line-height: 1.5;
-    }
-    .price-list {
-      list-style: none;
-      text-align: left;
-      margin-bottom: 32px;
-    }
-    .price-list li {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.85);
-      padding: 6px 0;
-      padding-left: 22px;
-      position: relative;
-    }
-    .price-list li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: #8FD4A8;
-      font-weight: 700;
-    }
-    .price-compare {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.5);
-      font-style: italic;
-      margin-bottom: 28px;
-    }
-
-    /* ── FINAL CTA ── */
-    .cta-section {
-      background: var(--paper);
-      text-align: center;
-      padding: 80px 5%;
-    }
-    .cta-section h2 { max-width: 600px; margin: 0 auto 16px; }
-    .cta-section p {
-      color: var(--ink-mid);
-      max-width: 480px;
-      margin: 0 auto 36px;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--green);
-      color: rgba(255,255,255,0.55);
-      text-align: center;
-      padding: 28px 5%;
-      font-size: 0.82rem;
-    }
-    footer a { color: rgba(255,255,255,0.65); text-decoration: none; }
-    footer a:hover { color: white; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      nav { padding: 0 20px; }
-      .hero { padding: 56px 20px 64px; }
-      section { padding: 56px 20px; }
-      .price-box { padding: 36px 28px; }
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">Policy<span>Ready</span>.org</a>
-  <a href="/shop.html" class="nav-btn">Browse Manuals</a>
+  <div class="nav-links">
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/about.html">About</a>
+    <a href="/shop.html" class="nav-btn">Browse Manuals</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">IDD Residential Provider Templates</div>
+  <div class="hero-eyebrow">Health Care Policy & Procedure Manuals</div>
   <h1>Your policy manual should know your state — not just have your state's name on it.</h1>
-  <p>Professionally written Policy & Procedure Manuals built to the specific regulations, agencies, and background check systems of the state you're operating in. 16 manuals across 8 states. $150 each. Download in minutes.</p>
+  <p>Policy & Procedure Manuals built to actual regulations, agencies, and background check systems specific to your state. Download in minutes.</p>
   <div class="hero-actions">
     <a href="/shop.html" class="btn-primary">Browse All Manuals</a>
-    <a href="#states" class="btn-ghost">See Available States</a>
+    <a href="/how-it-works.html" class="btn-ghost">How It Works</a>
   </div>
 </section>
 
@@ -433,182 +45,75 @@
   <span class="state-pill">Ohio</span>
 </div>
 
-<!-- WHAT'S INSIDE -->
+<!-- WHAT'S INSIDE (SHORT) -->
 <section class="inside-section">
-  <div style="max-width:1100px; margin:0 auto;">
+  <div class="container">
     <div class="section-label">What you get</div>
-    <h2>A complete, state-specific manual ready to put your name on</h2>
-    <p class="section-sub">Every manual is fully written — not a fill-in-the-blank skeleton. You fill in your name, your address, your effective date, and it's done.</p>
+    <h2>A complete manual, not a skeleton</h2>
+    <p class="section-sub">Covering rights, personnel, care services, medication management, emergency preparedness, and quality management — no blanks to fill in except your name and dates.</p>
     <div class="inside-grid">
-      <div class="inside-card">
-        <div class="inside-icon">📋</div>
-        <h3>68–73 pages, fully written</h3>
-        <p>24 policies across six sections — rights, personnel, care services, medication management, emergency preparedness, and quality management. No blanks to fill in except your name and dates.</p>
-      </div>
       <div class="inside-card">
         <div class="inside-icon">📍</div>
         <h3>Your state's actual citations</h3>
-        <p>Real regulatory code numbers, real agency names, real hotline numbers — for your specific state and setting type. Not a national template with your state dropped in.</p>
-      </div>
-      <div class="inside-card">
-        <div class="inside-icon">⚕️</div>
-        <h3>Joint Commission–aligned</h3>
-        <p>Every manual is built to align with JC Behavioral Health Care and Human Services standards — the same framework state surveyors and managed care organizations use.</p>
+        <p>Real regulatory code numbers, real agency names, real hotline numbers — for your specific state and setting type.</p>
       </div>
       <div class="inside-card">
         <div class="inside-icon">📄</div>
         <h3>Editable Word document</h3>
-        <p>Delivered as a .docx file. Open in Microsoft Word, fill in your bracketed fields, save, and it's yours. No subscription, no software, no extra steps.</p>
+        <p>Delivered as a .docx file. Open in Microsoft Word, fill in your bracketed fields, save, and it's yours.</p>
       </div>
       <div class="inside-card">
         <div class="inside-icon">✅</div>
         <h3>Two editions per state</h3>
-        <p>Each state has an Individual Provider edition (for people opening their own home) and an Agency edition (for organizations overseeing multiple homes).</p>
-      </div>
-      <div class="inside-card">
-        <div class="inside-icon">⬇️</div>
-        <h3>Instant download</h3>
-        <p>Pay once, download immediately. No waiting, no shipping, no account to create. The file is yours to keep, customize, and reuse as your program grows.</p>
+        <p>An Individual Provider edition and an Agency edition, so you get exactly the structure your role needs.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- STATES SECTION -->
-<section class="states-section" id="states">
-  <div style="max-width:1100px; margin:0 auto;">
-    <div class="section-label">Available states</div>
-    <h2>Find your state</h2>
-    <p class="section-sub">Each state has its own program name, regulatory citations, agencies, and background check system. Pick yours — both editions are available for each.</p>
-    <div class="states-grid">
-
-      <div class="state-card">
-        <div class="state-name">Colorado</div>
-        <div class="state-setting">Host Home Provider / Provider Agency</div>
-        <span class="cite-badge">10 CCR 2505-10</span>
-        <div class="state-editions">
-          <div class="edition-tag">Individual Provider Edition</div>
-          <div class="edition-tag">Agency Edition (PASA)</div>
-        </div>
-      </div>
-
-      <div class="state-card">
-        <div class="state-name">Arizona</div>
-        <div class="state-setting">Developmental Home Provider / Qualified Vendor Agency</div>
-        <span class="cite-badge">A.A.C. R6-6-1101</span>
-        <div class="state-editions">
-          <div class="edition-tag">Individual Provider Edition</div>
-          <div class="edition-tag">Qualified Vendor Agency Edition</div>
-        </div>
-      </div>
-
-      <div class="state-card">
-        <div class="state-name">Florida</div>
-        <div class="state-setting">Foster Care Facility Operator / Licensed Agency</div>
-        <span class="cite-badge">65G-2 F.A.C.</span>
-        <div class="state-editions">
-          <div class="edition-tag">Individual Operator Edition</div>
-          <div class="edition-tag">Licensed Provider Agency Edition</div>
-        </div>
-      </div>
-
-      <div class="state-card">
-        <div class="state-name">Texas</div>
-        <div class="state-setting">Host Home/Companion Care Provider / Program Provider</div>
-        <span class="cite-badge">26 TAC Ch. 263</span>
-        <div class="state-editions">
-          <div class="edition-tag">Individual HH/CC Provider Edition</div>
-          <div class="edition-tag">HCS Program Provider Edition</div>
-        </div>
-      </div>
-
-      <div class="state-card">
-        <div class="state-name">New Mexico</div>
-        <div class="state-setting">Family Living Provider / Provider Agency (DDW)</div>
-        <span class="cite-badge">8.314.5 NMAC</span>
-        <div class="state-editions">
-          <div class="edition-tag">Individual Family Living Provider Edition</div>
-          <div class="edition-tag">DDW Provider Agency Edition</div>
-        </div>
-      </div>
-
-      <div class="state-card">
-        <div class="state-name">Georgia</div>
-        <div class="state-setting">Host Home / Life-Sharing Provider / CRA Agency</div>
-        <span class="cite-badge">DBHDD Policy 02-704</span>
-        <div class="state-editions">
-          <div class="edition-tag">Individual Host Home Provider Edition</div>
-          <div class="edition-tag">CRA Provider Agency Edition</div>
-        </div>
-      </div>
-
-      <div class="state-card">
-        <div class="state-name">California</div>
-        <div class="state-setting">Family Home Provider / Family Home Agency (FHA)</div>
-        <span class="cite-badge">Title 17 CCR §56075</span>
-        <div class="state-editions">
-          <div class="edition-tag">Individual Family Home Provider Edition</div>
-          <div class="edition-tag">Family Home Agency (FHA) Edition</div>
-        </div>
-      </div>
-
-      <div class="state-card">
-        <div class="state-name">Ohio</div>
-        <div class="state-setting">Shared Living Independent / Agency Provider</div>
-        <span class="cite-badge">OAC 5123-9-33</span>
-        <div class="state-editions">
-          <div class="edition-tag">Independent Provider Edition</div>
-          <div class="edition-tag">Agency Provider Edition</div>
-        </div>
-      </div>
-
+    <div style="text-align:center; margin-top:40px;">
+      <a href="/how-it-works.html" class="btn-ghost-dark">See everything that's inside →</a>
     </div>
   </div>
 </section>
 
 <!-- WHO IT'S FOR -->
 <section class="who-section">
-  <div style="max-width:1100px; margin:0 auto;">
+  <div class="container">
     <div class="section-label">Who this is for</div>
     <h2>Built for people doing this the right way</h2>
-    <p class="section-sub">If you're opening a home to someone with a developmental disability and you need your paperwork to be right, this was made for you.</p>
+    <p class="section-sub">If you're opening a healthcare business to help people who need it — and you need your paperwork to be right, this was made for you.</p>
     <div class="who-grid">
       <div class="who-card">
         <h3>Individuals opening their own home</h3>
-        <p>You're becoming a host home, family living, or developmental home provider. You need a full P&P manual for your state before you can be approved. Start here — the Individual Provider edition has everything you need for your setting.</p>
+        <p>You're becoming a provider and need a full P&P manual for your state before you can be approved. Start with the Individual Provider edition for your setting.</p>
       </div>
       <div class="who-card">
         <h3>Small agencies launching a program</h3>
-        <p>You're starting or growing a residential program and need agency-level policies for your supervisors, staff, and contracted home providers. The Agency edition covers personnel, oversight, on-call systems, and provider vetting.</p>
+        <p>You're starting or growing a program and need agency-level policies for your supervisors, staff, and contracted home providers.</p>
       </div>
       <div class="who-card">
         <h3>Existing providers updating their policies</h3>
-        <p>Your current manual is outdated, incomplete, or doesn't match your state's current regulations. Get a professionally written, current baseline and update from there rather than rebuilding from scratch.</p>
+        <p>Your current manual is outdated or doesn't match your state's current regulations. Get a current, professional baseline.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICE SECTION -->
-<section class="price-section">
-  <div style="max-width:600px; margin:0 auto; text-align:center;">
-    <div class="section-label">Pricing</div>
-    <h2>One price. No surprises.</h2>
-    <p class="section-sub">Each manual is a one-time purchase. No subscription, no recurring fee, no license that expires.</p>
-    <div class="price-box">
-      <div class="price-amount">$150</div>
-      <div class="price-desc">per manual · one-time purchase · instant download</div>
-      <ul class="price-list">
-        <li>68–73 pages, fully written</li>
-        <li>State-specific throughout — real citations, real agencies</li>
-        <li>Editable Microsoft Word (.docx) format</li>
-        <li>Individual Provider and Agency editions available</li>
-        <li>Joint Commission–aligned framework</li>
-        <li>Yours to keep and reuse</li>
-      </ul>
-      <div class="price-compare">Compare to compliance consultants: $2,000–$10,000+</div>
-      <a href="/shop.html" class="btn-primary" style="display:inline-block; width:100%; text-align:center; font-size:1.05rem; padding:15px;">Browse All 16 Manuals</a>
+<!-- VALUE BOX -->
+<section class="value-section">
+  <div class="value-box">
+    <div class="value-list-title">What's included</div>
+    <ul class="price-list">
+      <li>State-specific throughout</li>
+      <li>Editable Microsoft Word format</li>
+      <li>Individual Provider and Agency editions</li>
+      <li>Joint Commission–aligned framework</li>
+      <li>Yours to keep and reuse</li>
+    </ul>
+    <div class="value-tags">
+      <span>One-time purchase</span>
+      <span>·</span>
+      <span>Instant download</span>
     </div>
+    <a href="/shop.html" class="btn-primary" style="display:inline-block; width:100%; text-align:center; font-size:1.05rem; padding:15px; margin-top:8px;">Browse All Manuals</a>
   </div>
 </section>
 
@@ -617,13 +122,14 @@
   <div class="section-label">Get started</div>
   <h2>Find your state and get your manual today</h2>
   <p>Pick your state, pick your edition, pay once, download immediately. Your manual is ready to fill in and submit.</p>
-  <a href="/shop.html" class="btn-primary" style="font-size:1.05rem; padding:15px 36px;">Browse All Manuals — $150 Each</a>
+  <a href="/shop.html" class="btn-primary" style="font-size:1.05rem; padding:15px 36px;">Browse All Manuals</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p style="margin-bottom:8px;">
     <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
+    <a href="/how-it-works.html">How It Works</a> &nbsp;·&nbsp;
+    <a href="/about.html">About</a> &nbsp;·&nbsp;
     <a href="/shop.html">Browse Manuals</a>
   </p>
   <p>These templates are professional starting-point documents and do not constitute legal advice. Verify current regulatory requirements with your state agency or a qualified compliance consultant before submitting.</p>

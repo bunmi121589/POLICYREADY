@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual — PolicyReady.org</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Policy<span>Ready</span>.org</a>
+  <div class="nav-links">
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/about.html">About</a>
+    <a href="/shop.html" class="nav-btn">Browse Manuals</a>
+  </div>
+</nav>
+
+<div class="manual-header" id="manualHeader"></div>
+
+<div class="manual-body-wrap" id="manualBody"></div>
+
+<footer>
+  <p style="margin-bottom:8px;">
+    <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
+    <a href="/how-it-works.html">How It Works</a> &nbsp;·&nbsp;
+    <a href="/about.html">About</a> &nbsp;·&nbsp;
+    <a href="/shop.html">Browse Manuals</a>
+  </p>
+  <p>These templates are professional starting-point documents and do not constitute legal advice. Verify current regulatory requirements with your state agency or a qualified compliance consultant before submitting.</p>
+</footer>
+
+<script src="/data.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('id');
+  const manual = findManual(slug);
+
+  if (!manual) {
+    document.getElementById('manualHeader').innerHTML = `
+      <div class="breadcrumb"><a href="/shop.html">← Browse by State</a></div>
+      <h1>Manual not found</h1>
+    `;
+  } else {
+    const state = manual.state;
+    document.title = `${manual.title} — PolicyReady.org`;
+
+    document.getElementById('manualHeader').innerHTML = `
+      <div class="breadcrumb">
+        <a href="/shop.html">Browse by State</a> &nbsp;/&nbsp;
+        <a href="/state.html?id=${state.id}">${state.name}</a>
+      </div>
+      <span class="manual-edition-tag">${manual.edition} Edition</span>
+      <h1>${manual.title}</h1>
+      <div class="manual-meta">
+        <span class="cite-badge" style="background:rgba(255,255,255,0.14); color:white;">${state.citation}</span>
+        <span class="meta-pages">${manual.pages} pages</span>
+      </div>
+    `;
+
+    document.getElementById('manualBody').innerHTML = `
+      <div class="manual-main">
+        <h2 class="section-heading">About this manual</h2>
+        <p class="detail-text">${manual.details}</p>
+
+        <div class="manual-list-title">What's covered</div>
+        <ul class="manual-bullets">
+          ${manual.bullets.map(b => `<li>${b}</li>`).join('')}
+        </ul>
+      </div>
+
+      <div class="buy-sidebar">
+        <div class="buy-price">$150</div>
+        <div class="buy-price-sub">One-time purchase · instant download</div>
+        <button class="buy-btn" id="buyBtn" onclick="checkout('${manual.slug}')">Buy Now</button>
+        <ul class="buy-includes">
+          <li>Editable Microsoft Word (.docx)</li>
+          <li>State-specific throughout</li>
+          <li>Joint Commission–aligned framework</li>
+          <li>Yours to keep and reuse</li>
+        </ul>
+        <div class="buy-pagecount">${manual.pages} pages · 24 policies across 6 sections, plus appendices</div>
+      </div>
+    `;
+  }
+
+  async function checkout(slug) {
+    const btn = document.getElementById('buyBtn');
+    btn.disabled = true;
+    btn.textContent = 'Redirecting...';
+
+    try {
+      const res = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug })
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert('Something went wrong. Please try again.');
+        btn.disabled = false;
+        btn.textContent = 'Buy Now';
+      }
+    } catch (err) {
+      alert('Something went wrong. Please try again.');
+      btn.disabled = false;
+      btn.textContent = 'Buy Now';
+    }
+  }
+</script>
+
+</body>
+</html>
