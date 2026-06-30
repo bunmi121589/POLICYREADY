@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+     <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -106,6 +107,26 @@
       color: #8A9490;
       line-height: 1.5;
     }
+    .tip {
+      background: #F1F5F2;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--green);
+      border-radius: 8px;
+      text-align: left;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+    }
+    .tip-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+    .tip-body {
+      font-size: 0.82rem;
+      color: var(--ink-mid);
+      line-height: 1.55;
+    }
     .loading { color: var(--ink-mid); font-size: 0.95rem; margin-bottom: 20px; }
     .error { color: #C0392B; font-size: 0.9rem; margin-bottom: 20px; }
 
@@ -133,6 +154,12 @@
 
     <div id="status"></div>
     <button class="download-btn" id="dlBtn" onclick="startDownload()" disabled>Loading...</button>
+
+    <div class="tip">
+      <div class="tip-title">Opening your manual</div>
+      <div class="tip-body">When you open the file, Microsoft Word may ask whether to update the document&rsquo;s fields. Click <strong>Yes</strong> so the Table of Contents fills in with the correct page numbers.</div>
+    </div>
+
     <p class="note">File will download as a .docx Microsoft Word document.<br>Having trouble? Email <a href="mailto:support@policyready.org" style="color:var(--green)">support@policyready.org</a></p>
   </div>
 </main>
