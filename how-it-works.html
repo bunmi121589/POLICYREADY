@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How It Works — PolicyReady.org</title>
-  <meta name="description" content="See everything included in every PolicyReady.org manual, and browse all 8 states currently available.">
+  <meta name="description" content="See everything included in every PolicyReady.org manual, and browse all the states currently available.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
 
 <section class="hero" style="padding-bottom:64px;">
   <div class="hero-eyebrow">How It Works</div>
-  <h1 style="font-size:clamp(1.8rem, 3.4vw, 2.6rem);">Pick your state. Get your manual. Fill in your name.</h1>
+  <h1 style="font-size:clamp(1.8rem, 3.4vw, 2.6rem);">Pick your state. Get your manual. Make it your own.</h1>
   <p>No questionnaire, no account, no subscription. Just find your state and setting type, buy, and download.</p>
 </section>
 
@@ -37,8 +37,8 @@
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
-        <h3>Pick your edition</h3>
-        <p>Individual Provider for your own home, or Agency for an organization overseeing multiple homes.</p>
+        <h3>Pick your manual</h3>
+        <p>Choose the manual that matches your setting and license type.</p>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
@@ -47,8 +47,8 @@
       </div>
       <div class="step-card">
         <div class="step-num">4</div>
-        <h3>Fill in your details</h3>
-        <p>Add your name, address, and effective date. It's ready to submit.</p>
+        <h3>Customize your details</h3>
+        <p>Add your organization's details and adapt it to your operations before you adopt it.</p>
       </div>
     </div>
   </div>
@@ -99,7 +99,7 @@
   <div class="container">
     <div class="section-label">Available states</div>
     <h2>Find your state</h2>
-    <p class="section-sub">Each state has its own program name, regulatory citations, agencies, and background check system. Click in to see both editions.</p>
+    <p class="section-sub">Click into your state to see the manuals available, each built to your state's regulations.</p>
     <div class="states-grid" id="statesGrid"></div>
   </div>
 </section>
@@ -112,7 +112,7 @@
     <div class="who-grid">
       <div class="who-card">
         <h3>Individuals opening their own home</h3>
-        <p>You're becoming a provider and need a full P&P manual for your state before you can be approved. Start with the Individual Provider edition for your setting.</p>
+        <p>You're becoming a provider and need a full P&P manual for your state before you can be approved. Start with the manual that matches your setting.</p>
       </div>
       <div class="who-card">
         <h3>Small agencies launching a program</h3>
@@ -148,11 +148,7 @@
   grid.innerHTML = STATES.map(s => `
     <a href="/state.html?id=${s.id}" class="state-card">
       <div class="state-name">${s.name}</div>
-      <div class="state-setting">${s.program}</div>
-      <span class="cite-badge">${s.citation}</span>
-      <div class="state-editions">
-        ${s.manuals.map(m => `<div class="edition-tag">${m.edition} Edition</div>`).join('')}
-      </div>
+      <div class="state-setting">${s.manuals.length} manual${s.manuals.length === 1 ? '' : 's'} available</div>
     </a>
   `).join('');
 </script>
