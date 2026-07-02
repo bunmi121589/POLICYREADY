@@ -47,6 +47,10 @@
     `;
   } else {
     const state = manual.state;
+    // Each manual can carry its own regulatory context; fall back to the state's.
+    const citation = manual.citation || state.citation;
+    const policies = manual.policies || '24 policies across 6 sections, plus appendices';
+    const editionTag = manual.edition + (manual.category ? '' : ' Edition');
     document.title = `${manual.title} — PolicyReady.org`;
 
     document.getElementById('manualHeader').innerHTML = `
@@ -54,10 +58,10 @@
         <a href="/shop.html">Browse by State</a> &nbsp;/&nbsp;
         <a href="/state.html?id=${state.id}">${state.name}</a>
       </div>
-      <span class="manual-edition-tag">${manual.edition} Edition</span>
+      <span class="manual-edition-tag">${editionTag}</span>
       <h1>${manual.title}</h1>
       <div class="manual-meta">
-        <span class="cite-badge" style="background:rgba(255,255,255,0.14); color:white;">${state.citation}</span>
+        <span class="cite-badge" style="background:rgba(255,255,255,0.14); color:white;">${citation}</span>
         <span class="meta-pages">${manual.pages} pages</span>
       </div>
     `;
@@ -74,16 +78,16 @@
       </div>
 
       <div class="buy-sidebar">
-        <div class="buy-price">$150</div>
+        <div class="buy-price">$200</div>
         <div class="buy-price-sub">One-time purchase · instant download</div>
         <button class="buy-btn" id="buyBtn" onclick="checkout('${manual.slug}')">Buy Now</button>
         <ul class="buy-includes">
           <li>Editable Microsoft Word (.docx)</li>
           <li>State-specific throughout</li>
-          <li>Joint Commission–aligned framework</li>
+          <li>Aligned to ${citation}</li>
           <li>Yours to keep and reuse</li>
         </ul>
-        <div class="buy-pagecount">${manual.pages} pages · 24 policies across 6 sections, plus appendices</div>
+        <div class="buy-pagecount">${manual.pages} pages · ${policies}</div>
       </div>
     `;
   }
