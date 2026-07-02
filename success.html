@@ -1,199 +1,43 @@
-
-     <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Your Manual — PolicyReady.org</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank you — your download is ready | PolicyReady</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --green:   #1A4731;
-      --amber:   #B86C1C;
-      --paper:   #F9F7F4;
-      --white:   #FFFFFF;
-      --ink:     #161C18;
-      --ink-mid: #3D4840;
-      --border:  #D4DDD7;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    nav {
-      background: var(--green);
-      display: flex;
-      align-items: center;
-      padding: 0 5%;
-      height: 64px;
-    }
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: white;
-      text-decoration: none;
-    }
-    .nav-logo span { color: #8FD4A8; }
-    .nav-home { color: rgba(255,255,255,0.75); font-size: 0.9rem; text-decoration: none; margin-left: auto; }
-    .nav-home:hover { color: white; }
-
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-    }
-    .card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 52px 48px;
-      max-width: 520px;
-      width: 100%;
-      text-align: center;
-    }
-    .check {
-      width: 64px;
-      height: 64px;
-      background: #E4EDE7;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      font-size: 1.8rem;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--green);
-      margin-bottom: 12px;
-    }
-    .subtitle {
-      color: var(--ink-mid);
-      font-size: 0.95rem;
-      margin-bottom: 36px;
-      line-height: 1.6;
-    }
-    .download-btn {
-      display: inline-block;
-      background: var(--amber);
-      color: white;
-      padding: 14px 36px;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      transition: background 0.15s;
-      margin-bottom: 16px;
-    }
-    .download-btn:hover { background: #9A5916; }
-    .download-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-    .note {
-      font-size: 0.8rem;
-      color: #8A9490;
-      line-height: 1.5;
-    }
-    .tip {
-      background: #F1F5F2;
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--green);
-      border-radius: 8px;
-      text-align: left;
-      padding: 14px 16px;
-      margin-bottom: 20px;
-    }
-    .tip-title {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--green);
-      margin-bottom: 4px;
-    }
-    .tip-body {
-      font-size: 0.82rem;
-      color: var(--ink-mid);
-      line-height: 1.55;
-    }
-    .loading { color: var(--ink-mid); font-size: 0.95rem; margin-bottom: 20px; }
-    .error { color: #C0392B; font-size: 0.9rem; margin-bottom: 20px; }
-
-    footer {
-      background: var(--green);
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 20px;
-      font-size: 0.8rem;
-    }
-    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    :root { --green:#1A4731; --accent:#2E5E45; }
+    body { font-family: Arial, Helvetica, sans-serif; color:#222; background:#EFF3F0;
+           display:flex; min-height:100vh; align-items:center; justify-content:center; margin:0; padding:24px; }
+    .card { background:#fff; max-width:560px; width:100%; border-radius:14px; padding:40px;
+            box-shadow:0 10px 40px rgba(0,0,0,.08); text-align:center; }
+    h1 { color:var(--green); margin:0 0 8px; font-size:26px; }
+    p { line-height:1.55; color:#444; }
+    .btn { display:inline-block; margin-top:14px; background:var(--green); color:#fff; text-decoration:none;
+           padding:14px 26px; border-radius:8px; font-weight:bold; }
+    .btn:hover { background:var(--accent); }
+    .muted { font-size:13px; color:#888; margin-top:22px; }
   </style>
 </head>
 <body>
-
-<nav>
-  <a href="/" class="nav-logo">Policy<span>Ready</span>.org</a>
-</nav>
-
-<main>
   <div class="card">
-    <div class="check">✓</div>
-    <h1>Payment Confirmed</h1>
-    <p class="subtitle" id="subtitle">Your manual is ready. Click below to download your editable Word document.</p>
-
-    <div id="status"></div>
-    <button class="download-btn" id="dlBtn" onclick="startDownload()" disabled>Loading...</button>
-
-    <div class="tip">
-      <div class="tip-title">Opening your manual</div>
-      <div class="tip-body">When you open the file, Microsoft Word may ask whether to update the document&rsquo;s fields. Click <strong>Yes</strong> so the Table of Contents fills in with the correct page numbers.</div>
-    </div>
-
-    <p class="note">File will download as a .docx Microsoft Word document.<br>Having trouble? Email <a href="mailto:support@policyready.org" style="color:var(--green)">support@policyready.org</a></p>
+    <h1>Thank you for your purchase</h1>
+    <p>Your editable Word manual is ready. Your download should begin automatically.
+       If it doesn't, use the button below.</p>
+    <a id="dl" class="btn" href="#">Download my manual</a>
+    <p class="muted">We've also emailed a copy to the address you used at checkout.
+       Trouble downloading? Contact us and we'll send it right over.</p>
   </div>
-</main>
-
-<footer>
-  <a href="/">PolicyReady.org</a> &nbsp;·&nbsp; <a href="/shop.html">Browse More Manuals</a>
-</footer>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const sessionId = params.get('session_id');
-  const btn = document.getElementById('dlBtn');
-  const statusEl = document.getElementById('status');
-
-  if (!sessionId) {
-    statusEl.innerHTML = '<p class="error">No session found. If you completed a purchase, please check your email or contact support.</p>';
-    btn.textContent = 'Contact Support';
-    btn.disabled = false;
-    btn.onclick = () => window.location.href = 'mailto:support@policyready.org';
-  } else {
-    btn.textContent = 'Download Your Manual';
-    btn.disabled = false;
-  }
-
-  function startDownload() {
-    btn.disabled = true;
-    btn.textContent = 'Preparing download...';
-    window.location.href = `/api/download?session_id=${sessionId}`;
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.textContent = 'Download Again';
-    }, 3000);
-  }
-</script>
-
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var sid = params.get("session_id");
+      var link = document.getElementById("dl");
+      if (!sid) { link.textContent = "Return to site"; link.href = "/"; return; }
+      var url = "/api/download?session_id=" + encodeURIComponent(sid);
+      link.href = url;
+      // Auto-start the download shortly after the page loads.
+      setTimeout(function () { window.location.href = url; }, 800);
+    })();
+  </script>
 </body>
 </html>

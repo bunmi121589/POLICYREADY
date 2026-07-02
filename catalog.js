@@ -1,0 +1,94 @@
+// catalog.js — single source of truth for what can be purchased and delivered.
+//
+// Every manual is a flat $200. Stripe does NOT need a product/price created for
+// each one: the checkout function builds a $200 line item on the fly and stores
+// the manual's `slug` in the session metadata. This file maps that slug to the
+// display title (shown on the Stripe checkout page) and the file to deliver
+// (the .docx must sit in api/_files/ with the exact name below).
+//
+// >>> THE ONE INTEGRATION SEAM <<<
+// The `slug` values below MUST match the slugs your site already uses in data.js
+// and in your product/state detail URLs. Keep this file as the source of truth
+// and make data.js use the same slugs, OR replace PRODUCTS by importing data.js.
+// Everything else in this integration reads through getProduct().
+
+const PRICE_CENTS = 20000; // $200.00 — flat price for every manual
+const CURRENCY = "usd";
+
+// slug: { title (shown at checkout), file (delivered .docx in api/_files/) }
+const PRODUCTS = {
+  // ===== Behavioral Health — Substance Use (SUD) line =====
+  "co-bhe": { title: "Colorado Behavioral Health Entity (BHE) Base Policy & Procedure Manual", file: "CO Behavioral Health Entity (BHE) Base PP Manual.docx" },
+  "co-bhe-outpatient-addon": { title: "Colorado BHE Outpatient Endorsement Add-On", file: "CO BHE Outpatient Endorsement Add-On.docx" },
+  "co-bhe-residential-addon": { title: "Colorado BHE Residential & Withdrawal Management Endorsement Add-On", file: "CO BHE Residential & Withdrawal Management Endorsement Add-On.docx" },
+  "co-bhe-crisis-addon": { title: "Colorado BHE Emergency & Crisis Services Endorsement Add-On", file: "CO BHE Emergency & Crisis Services Endorsement Add-On.docx" },
+  "az-bhrf": { title: "Arizona Behavioral Health Residential Facility (BHRF) Policy & Procedure Manual", file: "AZ Behavioral Health Residential Facility (BHRF) PP Manual.docx" },
+  "az-otc": { title: "Arizona Outpatient Treatment Center (OTC) Policy & Procedure Manual", file: "AZ Outpatient Treatment Center (OTC) PP Manual.docx" },
+  "fl-sud": { title: "Florida Substance Abuse Services (DCF 65D-30) Policy & Procedure Manual", file: "FL Substance Abuse Services (DCF 65D-30) PP Manual.docx" },
+  "tx-sud": { title: "Texas Chemical Dependency Treatment Facility (26 TAC 564) Policy & Procedure Manual", file: "TX Chemical Dependency Treatment Facility (26 TAC 564) PP Manual.docx" },
+  "nm-bha": { title: "New Mexico Behavioral Health Agency (Substance Use & Mental Health) Policy & Procedure Manual", file: "NM Behavioral Health Agency (Substance Use & Mental Health) PP Manual.docx" },
+  "ga-sud": { title: "Georgia Drug Abuse Treatment & Education Program (111-8-19) Policy & Procedure Manual", file: "GA Drug Abuse Treatment & Education Program (111-8-19) PP Manual.docx" },
+  "ca-sud": { title: "California Residential AOD Recovery or Treatment Facility (Title 9 Ch5) Policy & Procedure Manual", file: "CA Residential AOD Recovery or Treatment Facility (Title 9 Ch5) PP Manual.docx" },
+  "oh-bh": { title: "Ohio Behavioral Health Provider (OhioMHAS) Policy & Procedure Manual", file: "OH Behavioral Health Provider (OhioMHAS) PP Manual.docx" },
+  "wi-sud": { title: "Wisconsin Community Substance Use Service (DHS 75) Policy & Procedure Manual", file: "WI Community Substance Use Service (DHS 75) PP Manual.docx" },
+  "ar-sud": { title: "Arkansas Alcohol & Other Drug Abuse Treatment Program (OADAP Part 433) Policy & Procedure Manual", file: "AR Alcohol & Other Drug Abuse Treatment Program (OADAP Part 433) PP Manual.docx" },
+  "tn-sud": { title: "Tennessee Alcohol & Drug Treatment Facility (TDMHSAS 0940-05) Policy & Procedure Manual", file: "TN Alcohol & Drug Treatment Facility (TDMHSAS 0940-05) PP Manual.docx" },
+  "sc-sud": { title: "South Carolina Facility Treating Psychoactive Substance Abuse or Dependence (R.61-93) Policy & Procedure Manual", file: "SC Facility Treating Psychoactive Substance Abuse or Dependence (R.61-93) PP Manual.docx" },
+  "va-sud": { title: "Virginia Substance Use Disorder Provider (DBHDS 12VAC35-105) Policy & Procedure Manual", file: "VA Substance Use Disorder Provider (DBHDS 12VAC35-105) PP Manual.docx" },
+
+  // ===== Mental Health (MH) line =====
+  "fl-mh": { title: "Florida Mental Health Residential Treatment Facility (AHCA 65E-4.016) Policy & Procedure Manual", file: "FL Mental Health Residential Treatment Facility (AHCA 65E-4.016) PP Manual.docx" },
+  "tx-mh": { title: "Texas Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) Policy & Procedure Manual", file: "TX Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) PP Manual.docx" },
+  "ga-mh": { title: "Georgia Adult Residential Mental Health Program (111-8-2) Policy & Procedure Manual", file: "GA Adult Residential Mental Health Program (111-8-2) PP Manual.docx" },
+  "wi-mh": { title: "Wisconsin Outpatient Mental Health Clinic (DHS 35) Policy & Procedure Manual", file: "WI Outpatient Mental Health Clinic (DHS 35) PP Manual.docx" },
+  "ar-mh": { title: "Arkansas Behavioral Health Agency (Outpatient Behavioral Health Services) Policy & Procedure Manual", file: "AR Behavioral Health Agency (Outpatient Behavioral Health Services) PP Manual.docx" },
+  "tn-mh": { title: "Tennessee Mental Health Adult Residential Treatment Program (0940-05-17) Policy & Procedure Manual", file: "TN Mental Health Adult Residential Treatment Program (0940-05-17) PP Manual.docx" },
+  "ca-mh": { title: "California Mental Health Rehabilitation Center (Title 9 Ch 3.5) Policy & Procedure Manual", file: "CA Mental Health Rehabilitation Center (Title 9 Ch 3.5) PP Manual.docx" },
+  "sc-mh": { title: "South Carolina Residential Treatment Facility for Children & Adolescents (R.60-103) Policy & Procedure Manual", file: "SC Residential Treatment Facility for Children & Adolescents (R.60-103) PP Manual.docx" },
+
+  // ===== Assisted Living / Residential Care line =====
+  "az-al-personal-care": { title: "Arizona Assisted Living Personal Care Policy & Procedure Manual", file: "AZ Assisted Living Personal Care PP Manual.docx" },
+  "az-al-directed-care": { title: "Arizona Assisted Living Directed Care Policy & Procedure Manual", file: "AZ Assisted Living Directed Care PP Manual.docx" },
+  "az-al-supervisory-care": { title: "Arizona Assisted Living Supervisory Care Policy & Procedure Manual", file: "AZ Assisted Living Supervisory Care PP Manual.docx" },
+  "ar-alf-level-1": { title: "Arkansas Assisted Living Facility Level I Policy & Procedure Manual", file: "AR Assisted Living Facility Level I PP Manual.docx" },
+  "ar-alf-level-2": { title: "Arkansas Assisted Living Facility Level II Policy & Procedure Manual", file: "AR Assisted Living Facility Level II PP Manual.docx" },
+  "ca-rcfe": { title: "California Residential Care Facility for the Elderly (RCFE) Policy & Procedure Manual", file: "CA Residential Care Facility for the Elderly (RCFE) PP Manual.docx" },
+  "co-alr": { title: "Colorado Assisted Living Residence Policy & Procedure Manual", file: "CO Assisted Living Residence PP Manual.docx" },
+  "fl-al-standard": { title: "Florida Assisted Living Standard License Policy & Procedure Manual", file: "FL Assisted Living Standard License PP Manual.docx" },
+  "fl-al-ecc-addon": { title: "Florida Assisted Living ECC Add-On", file: "FL Assisted Living ECC Add-On.docx" },
+  "fl-al-lmh-addon": { title: "Florida Assisted Living LMH Add-On", file: "FL Assisted Living LMH Add-On.docx" },
+  "fl-al-lns-addon": { title: "Florida Assisted Living LNS Add-On", file: "FL Assisted Living LNS Add-On.docx" },
+  "ga-alc": { title: "Georgia Assisted Living Community (ALC) Policy & Procedure Manual", file: "GA Assisted Living Community (ALC) PP Manual.docx" },
+  "ga-pch": { title: "Georgia Personal Care Home (PCH) Policy & Procedure Manual", file: "GA Personal Care Home (PCH) PP Manual.docx" },
+  "nm-al": { title: "New Mexico Assisted Living Policy & Procedure Manual", file: "NM Assisted Living PP Manual.docx" },
+  "oh-rcf": { title: "Ohio Residential Care Facility (RCF) Policy & Procedure Manual", file: "OH Residential Care Facility (RCF) PP Manual.docx" },
+  "sc-crcf": { title: "South Carolina Community Residential Care Facility (CRCF) Policy & Procedure Manual", file: "SC Community Residential Care Facility (CRCF) PP Manual.docx" },
+  "tn-aclf": { title: "Tennessee Assisted-Care Living Facility (ACLF) Policy & Procedure Manual", file: "TN Assisted-Care Living Facility (ACLF) PP Manual.docx" },
+  "tn-rha": { title: "Tennessee Residential Home for the Aged (RHA) Policy & Procedure Manual", file: "TN Residential Home for the Aged (RHA) PP Manual.docx" },
+  "tx-al-type-ab": { title: "Texas Assisted Living Type A and B Policy & Procedure Manual", file: "TX Assisted Living Type A and B PP Manual.docx" },
+  "va-alf": { title: "Virginia Assisted Living Facility (ALF) Policy & Procedure Manual", file: "VA Assisted Living Facility (ALF) PP Manual.docx" },
+  "wi-cbrf": { title: "Wisconsin Community-Based Residential Facility (CBRF) Policy & Procedure Manual", file: "WI Community-Based Residential Facility (CBRF) PP Manual.docx" },
+  "wi-afh": { title: "Wisconsin Licensed Adult Family Home (AFH 3-4 Bed) Policy & Procedure Manual", file: "WI Licensed Adult Family Home (AFH 3-4 Bed) PP Manual.docx" },
+
+  // ===== Employee Handbook line =====
+  "ar-al-handbook": { title: "Arkansas Assisted Living Employee Handbook", file: "AR Assisted Living Employee Handbook.docx" },
+  "az-al-handbook": { title: "Arizona Assisted Living Employee Handbook", file: "AZ Assisted Living Employee Handbook.docx" },
+  "ca-rcfe-handbook": { title: "California RCFE Employee Handbook", file: "CA RCFE Employee Handbook.docx" },
+  "co-al-handbook": { title: "Colorado Assisted Living Employee Handbook", file: "CO Assisted Living Employee Handbook.docx" },
+  "fl-al-handbook": { title: "Florida Assisted Living Employee Handbook", file: "FL Assisted Living Employee Handbook.docx" },
+  "ga-al-handbook": { title: "Georgia Assisted Living Employee Handbook", file: "GA Assisted Living Employee Handbook.docx" },
+  "nm-al-handbook": { title: "New Mexico Assisted Living Employee Handbook", file: "NM Assisted Living Employee Handbook.docx" },
+  "oh-rcf-handbook": { title: "Ohio Residential Care Facility Employee Handbook", file: "OH Residential Care Facility Employee Handbook.docx" },
+  "sc-crcf-handbook": { title: "South Carolina Community Residential Care Facility Employee Handbook", file: "SC Community Residential Care Facility Employee Handbook.docx" },
+  "tn-aclf-handbook": { title: "Tennessee Assisted-Care Living Facility Employee Handbook", file: "TN Assisted-Care Living Facility Employee Handbook.docx" },
+  "tx-al-handbook": { title: "Texas Assisted Living Employee Handbook", file: "TX Assisted Living Employee Handbook.docx" },
+  "va-al-handbook": { title: "Virginia Assisted Living Employee Handbook", file: "VA Assisted Living Employee Handbook.docx" },
+  "wi-cbrf-handbook": { title: "Wisconsin Community-Based Residential Facility Employee Handbook", file: "WI Community-Based Residential Facility Employee Handbook.docx" },
+};
+
+function getProduct(slug) {
+  if (!slug || typeof slug !== "string") return null;
+  return PRODUCTS[slug] || null;
+}
+
+module.exports = { PRODUCTS, PRICE_CENTS, CURRENCY, getProduct };

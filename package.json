@@ -1,8 +1,9 @@
 {
-  "name": "policyready",
+  "name": "policyready-stripe",
   "version": "1.0.0",
-  "description": "PolicyReady.org — IDD Residential Provider P&P Manuals",
+  "private": true,
+  "description": "Stripe checkout + secure download delivery for PolicyReady.org manuals",
   "dependencies": {
-    "stripe": "^14.0.0"
+    "stripe": "^17.0.0"
   }
 }
