@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+
 <nav>
   <a href="/" class="nav-logo">Policy<span>Ready</span>.org</a>
   <div class="nav-links">
@@ -18,8 +19,11 @@
     <a href="/shop.html" class="nav-btn">Browse Manuals</a>
   </div>
 </nav>
+
 <div class="state-header" id="stateHeader"></div>
+
 <div class="state-manuals-grid" id="manualsGrid"></div>
+
 <footer>
   <p style="margin-bottom:8px;">
     <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
@@ -29,11 +33,13 @@
   </p>
   <p>These templates are professional starting-point documents and do not constitute legal advice. Verify current regulatory requirements with your state agency or a qualified compliance consultant before submitting.</p>
 </footer>
+
 <script src="/data.js"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
   const stateId = params.get('id');
   const state = findState(stateId);
+
   if (!state) {
     document.getElementById('stateHeader').innerHTML = `
       <div class="breadcrumb"><a href="/shop.html">← Browse by State</a></div>
@@ -42,12 +48,27 @@
     `;
   } else {
     document.title = `${state.name} Manuals — PolicyReady.org`;
+
     document.getElementById('stateHeader').innerHTML = `
       <div class="breadcrumb"><a href="/shop.html">← Browse by State</a></div>
       <h1>${state.name}</h1>
-      <p class="program-line">State-specific policy &amp; procedure manuals, built to your state's regulations.</p>
+      <p class="program-line">${state.program} · ${state.agency}</p>
+      <span class="cite-badge" style="background:rgba(255,255,255,0.14); color:white;">${state.citation}</span>
     `;
+
     document.getElementById('manualsGrid').innerHTML = state.manuals.map(m => `
       <a href="/manual.html?id=${m.slug}" class="product-card">
         <div class="card-stripe"></div>
-        <div
+        <div class="card-body">
+          <span class="card-edition">${m.edition}</span>
+          <div class="card-title">${m.title}</div>
+          <div class="card-summary">${m.summary}</div>
+          <div class="card-cta">View full details →</div>
+        </div>
+      </a>
+    `).join('');
+  }
+</script>
+
+</body>
+</html>
