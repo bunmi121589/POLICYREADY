@@ -1,17 +1,17 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop — PolicyReady.org</title>
-  <meta name="description" content="Browse Policy & Procedure Manuals by state. 8 states available, two editions each.">
+  <meta name="description" content="Browse Policy & Procedure Manuals by state.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
 <nav>
   <a href="/" class="nav-logo">Policy<span>Ready</span>.org</a>
   <div class="nav-links">
@@ -20,14 +20,11 @@
     <a href="/shop.html" class="nav-btn">Browse Manuals</a>
   </div>
 </nav>
-
 <div class="shop-header">
   <h1>Browse by State</h1>
-  <p>Click into your state to see the manuals available — both Individual Provider and Agency editions.</p>
+  <p>Click into your state to see the manuals available.</p>
 </div>
-
 <div class="shop-grid" id="shopGrid"></div>
-
 <footer>
   <p style="margin-bottom:8px;">
     <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
@@ -36,7 +33,6 @@
   </p>
   <p>These templates are professional starting-point documents and do not constitute legal advice. Verify current regulatory requirements with your state agency or a qualified compliance consultant before submitting.</p>
 </footer>
-
 <script src="/data.js"></script>
 <script>
   const grid = document.getElementById('shopGrid');
@@ -45,14 +41,11 @@
       <div class="shop-state-stripe"></div>
       <div class="shop-state-body">
         <div class="shop-state-name">${s.name}</div>
-        <div class="shop-state-program">${s.program}</div>
-        <span class="cite-badge">${s.citation}</span>
-        <div class="shop-state-count">${s.manuals.length} manuals available</div>
+        <div class="shop-state-count">${s.manuals.length} manual${s.manuals.length === 1 ? '' : 's'} available</div>
       </div>
       <div class="shop-state-arrow">View ${s.name} Manuals →</div>
     </a>
   `).join('');
 </script>
-
 </body>
 </html>
