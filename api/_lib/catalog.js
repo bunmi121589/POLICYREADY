@@ -111,6 +111,20 @@ const PRODUCTS = {
   "tx-al-handbook": { title: "Texas Assisted Living Employee Handbook", file: "TX Assisted Living Employee Handbook.docx" },
   "va-al-handbook": { title: "Virginia Assisted Living Employee Handbook", file: "VA Assisted Living Employee Handbook.docx" },
   "wi-cbrf-handbook": { title: "Wisconsin Community-Based Residential Facility Employee Handbook", file: "WI Community-Based Residential Facility Employee Handbook.docx" },
+  // ===== Care Provider Employee Handbook line =====
+  "ar-care-handbook": { title: "Arkansas Care Provider Employee Handbook", file: "AR_Care_Provider_Employee_Handbook.docx" },
+  "az-care-handbook": { title: "Arizona Care Provider Employee Handbook", file: "AZ_Care_Provider_Employee_Handbook.docx" },
+  "ca-care-handbook": { title: "California Care Provider Employee Handbook", file: "CA_Care_Provider_Employee_Handbook.docx" },
+  "co-care-handbook": { title: "Colorado Care Provider Employee Handbook", file: "CO_Care_Provider_Employee_Handbook.docx" },
+  "fl-care-handbook": { title: "Florida Care Provider Employee Handbook", file: "FL_Care_Provider_Employee_Handbook.docx" },
+  "ga-care-handbook": { title: "Georgia Care Provider Employee Handbook", file: "GA_Care_Provider_Employee_Handbook.docx" },
+  "nm-care-handbook": { title: "New Mexico Care Provider Employee Handbook", file: "NM_Care_Provider_Employee_Handbook.docx" },
+  "oh-care-handbook": { title: "Ohio Care Provider Employee Handbook", file: "OH_Care_Provider_Employee_Handbook.docx" },
+  "sc-care-handbook": { title: "South Carolina Care Provider Employee Handbook", file: "SC_Care_Provider_Employee_Handbook.docx" },
+  "tn-care-handbook": { title: "Tennessee Care Provider Employee Handbook", file: "TN_Care_Provider_Employee_Handbook.docx" },
+  "tx-care-handbook": { title: "Texas Care Provider Employee Handbook", file: "TX_Care_Provider_Employee_Handbook.docx" },
+  "va-care-handbook": { title: "Virginia Care Provider Employee Handbook", file: "VA_Care_Provider_Employee_Handbook.docx" },
+  "wi-care-handbook": { title: "Wisconsin Care Provider Employee Handbook", file: "WI_Care_Provider_Employee_Handbook.docx" },
 };
 
 function getProduct(slug) {
