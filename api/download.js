@@ -9,7 +9,7 @@ const { stripe } = require("./_lib/stripe");
 const { getProduct } = require("./_lib/catalog");
 
 // Purchased files live OUTSIDE any public folder, bundled with the function.
-const FILES_DIR = path.join(__dirname, "_files");
+const FILES_DIR = path.join(process.cwd(), "api", "_files");
 
 module.exports = async function handler(req, res) {
   try {
