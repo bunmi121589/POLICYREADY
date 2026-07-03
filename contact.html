@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — PolicyReady.org</title>
+  <meta name="description" content="Questions about which manual fits your state or license type, help with an order, or anything else — contact the PolicyReady team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .contact-wrap { max-width: 640px; margin: 0 auto; padding: 48px 5% 64px; }
+    .contact-direct { background: var(--tag-bg); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 30px; color: var(--ink-mid); font-size: 0.95rem; }
+    .contact-direct a { color: var(--green-mid); font-weight: 600; text-decoration: none; }
+    .contact-direct a:hover { text-decoration: underline; }
+    .contact-form { display: grid; gap: 18px; }
+    .field { display: grid; gap: 6px; }
+    .field label { font-size: 0.85rem; font-weight: 600; color: var(--ink-mid); }
+    .field input, .field select, .field textarea { font-family: inherit; font-size: 1rem; color: var(--ink); background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; width: 100%; }
+    .field textarea { min-height: 140px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--green-mid); box-shadow: 0 0 0 3px rgba(45,106,74,0.12); }
+    .field-check { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--ink-mid); }
+    .field-check input { width: auto; margin-top: 3px; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    #contactStatus { display: none; border-radius: 8px; padding: 14px 16px; font-size: 0.95rem; margin-bottom: 20px; }
+    #contactStatus.ok { display: block; background: var(--green-lt); color: var(--green); border: 1px solid #B9D3C3; }
+    #contactStatus.err { display: block; background: #FBEEE2; color: var(--amber-dk); border: 1px solid #E7CBA9; }
+    #contactStatus a { color: inherit; font-weight: 600; }
+    .contact-form button[disabled] { opacity: 0.6; cursor: default; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Policy<span>Ready</span>.org</a>
+  <div class="nav-links">
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/shop.html" class="nav-btn">Browse Manuals</a>
+  </div>
+</nav>
+
+<div class="shop-header">
+  <h1>Contact Us</h1>
+  <p>Not sure which manual fits your state or license type? Need help with an order or download? Send a message and we'll get back to you — we care about getting your compliance paperwork right.</p>
+</div>
+
+<div class="contact-wrap">
+  <div class="contact-direct">
+    Prefer email? Reach us directly at <a href="mailto:hello@policyready.org">hello@policyready.org</a> — we read every message.
+  </div>
+
+  <div id="contactStatus"></div>
+
+  <form class="contact-form" id="contactForm" novalidate>
+    <div class="field">
+      <label for="cf-name">Your name</label>
+      <input type="text" id="cf-name" name="name" autocomplete="name">
+    </div>
+    <div class="field">
+      <label for="cf-email">Email <span style="color:var(--amber)">*</span></label>
+      <input type="email" id="cf-email" name="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="cf-subject">What's this about?</label>
+      <select id="cf-subject" name="subject">
+        <option>Choosing the right manual</option>
+        <option>Help with an order or download</option>
+        <option>Custom or bulk request</option>
+        <option>Training videos</option>
+        <option>Something else</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="cf-message">Message <span style="color:var(--amber)">*</span></label>
+      <textarea id="cf-message" name="message" required></textarea>
+    </div>
+    <label class="field-check">
+      <input type="checkbox" id="cf-optin" name="optIn">
+      <span>Keep me posted on new state manuals, training videos, and resources.</span>
+    </label>
+    <input type="text" class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit" class="btn-primary" id="cf-submit">Send message</button>
+  </form>
+</div>
+
+<footer>
+  <p style="margin-bottom:8px;">
+    <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
+    <a href="/how-it-works.html">How It Works</a> &nbsp;·&nbsp;
+    <a href="/about.html">About</a> &nbsp;·&nbsp;
+    <a href="/shop.html">Browse Manuals</a>
+  </p>
+  <p style="margin-top:10px;">Contact: <a href="mailto:hello@policyready.org">hello@policyready.org</a></p>
+  <p>These templates are professional starting-point documents and do not constitute legal advice. Verify current regulatory requirements with your state agency or a qualified compliance consultant before submitting.</p>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById("contactForm");
+    var statusEl = document.getElementById("contactStatus");
+    var btn = document.getElementById("cf-submit");
+    function show(kind, html) { statusEl.className = kind; statusEl.innerHTML = html; statusEl.scrollIntoView({behavior:"smooth", block:"center"}); }
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      var email = document.getElementById("cf-email").value.trim();
+      var message = document.getElementById("cf-message").value.trim();
+      if (!email || !message) { show("err", "Please add your email and a message so we can reply."); return; }
+      var payload = {
+        name: document.getElementById("cf-name").value.trim(),
+        email: email,
+        subject: document.getElementById("cf-subject").value,
+        message: message,
+        optIn: document.getElementById("cf-optin").checked,
+        company: form.company.value
+      };
+      btn.disabled = true; btn.textContent = "Sending\u2026";
+      try {
+        var r = await fetch("/api/contact", { method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(payload) });
+        var data = {};
+        try { data = await r.json(); } catch (_) {}
+        if (r.ok && data.ok) {
+          form.reset();
+          show("ok", "Thanks \u2014 your message is on its way. We'll reply to the email you provided.");
+        } else {
+          show("err", "We couldn't send that just now. Please email us directly at <a href='mailto:hello@policyready.org'>hello@policyready.org</a> and we'll take care of it.");
+        }
+      } catch (_) {
+        show("err", "We couldn't send that just now. Please email us directly at <a href='mailto:hello@policyready.org'>hello@policyready.org</a>.");
+      } finally {
+        btn.disabled = false; btn.textContent = "Send message";
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
