@@ -17,6 +17,24 @@ const CURRENCY = "usd";
 
 // slug: { title (shown at checkout), file (delivered .docx in api/_files/) }
 const PRODUCTS = {
+  // ===== Host Home / IDD Residential line (original) =====
+  'co-individual': { title: 'Policy & Procedure Manual for Host Home Provider (Colorado)', file: 'CO_Individual_Provider_JC_FINAL.docx' },
+  'co-agency': { title: 'Policy & Procedure Manual for Host Home Provider Agency (Colorado)', file: 'CO_Agency_PASA_JC_FINAL.docx' },
+  'az-individual': { title: 'Policy & Procedure Manual for Developmental Home Provider (Arizona)', file: 'AZ_Individual_Provider_JC_FINAL.docx' },
+  'az-agency': { title: 'Policy & Procedure Manual for Developmental Home Provider Agency (Arizona)', file: 'AZ_Agency_QualifiedVendor_JC_FINAL.docx' },
+  'fl-individual': { title: 'Policy & Procedure Manual for Foster Care Facility Operator (Florida)', file: 'FL_Individual_Operator_JC_FINAL.docx' },
+  'fl-agency': { title: 'Policy & Procedure Manual for Foster Care Facility Agency (Florida)', file: 'FL_Agency_LicensedProvider_JC_FINAL.docx' },
+  'tx-individual': { title: 'Policy & Procedure Manual for Host Home/Companion Care Provider (Texas)', file: 'TX_Individual_HH_CC_Provider_JC_FINAL.docx' },
+  'tx-agency': { title: 'Policy & Procedure Manual for HCS Program Provider (Texas)', file: 'TX_Program_Provider_JC_FINAL.docx' },
+  'nm-individual': { title: 'Policy & Procedure Manual for Family Living Provider (New Mexico)', file: 'NM_Individual_FamilyLiving_Provider_JC_FINAL.docx' },
+  'nm-agency': { title: 'Policy & Procedure Manual for DDW Family Living Provider Agency (New Mexico)', file: 'NM_Provider_Agency_JC_FINAL.docx' },
+  'ga-individual': { title: 'Policy & Procedure Manual for Host Home/Life-Sharing Provider (Georgia)', file: 'GA_Individual_HostHome_Provider_JC_FINAL.docx' },
+  'ga-agency': { title: 'Policy & Procedure Manual for CRA Provider Agency (Georgia)', file: 'GA_Agency_CRA_Provider_JC_FINAL.docx' },
+  'ca-individual': { title: 'Policy & Procedure Manual for Family Home Provider - FHA (California)', file: 'CA_Individual_FamilyHome_Provider_JC_FINAL.docx' },
+  'ca-agency': { title: 'Policy & Procedure Manual for Family Home Agency - FHA (California)', file: 'CA_FamilyHomeAgency_JC_FINAL.docx' },
+  'oh-individual': { title: 'Policy & Procedure Manual for Shared Living Independent Provider (Ohio)', file: 'OH_Individual_SharedLiving_Provider_JC_FINAL.docx' },
+  'oh-agency': { title: 'Policy & Procedure Manual for Shared Living Agency Provider (Ohio)', file: 'OH_Agency_SharedLiving_Provider_JC_FINAL.docx' },
+
   // ===== Behavioral Health — Substance Use (SUD) line =====
   "co-bhe": { title: "Colorado Behavioral Health Entity (BHE) Base Policy & Procedure Manual", file: "CO Behavioral Health Entity (BHE) Base PP Manual.docx" },
   "co-bhe-outpatient-addon": { title: "Colorado BHE Outpatient Endorsement Add-On", file: "CO BHE Outpatient Endorsement Add-On.docx" },
