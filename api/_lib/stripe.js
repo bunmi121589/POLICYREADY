@@ -2,12 +2,10 @@
 // Keys are read from environment variables ONLY. Never hard-code keys here.
 const Stripe = require("stripe");
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2026-01-28", // pin the API version; matches Stripe Node SDK v17
-});
+// No apiVersion pinned — Stripe uses your account's default version.
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-// SITE_URL is your public site origin, e.g. https://policyready.org
-// Used to build success/cancel URLs. Falls back to the request origin if unset.
+// SITE_URL is your public site origin, e.g. https://www.policyready.org
 function siteUrl(req) {
   if (process.env.SITE_URL) return process.env.SITE_URL.replace(/\/$/, "");
   const proto = (req.headers["x-forwarded-proto"] || "https").split(",")[0];
