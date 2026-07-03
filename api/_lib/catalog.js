@@ -87,6 +87,7 @@ const PRODUCTS = {
   "va-alf": { title: "Virginia Assisted Living Facility (ALF) Policy & Procedure Manual", file: "VA Assisted Living Facility (ALF) PP Manual.docx" },
   "wi-cbrf": { title: "Wisconsin Community-Based Residential Facility (CBRF) Policy & Procedure Manual", file: "WI Community-Based Residential Facility (CBRF) PP Manual.docx" },
   "wi-afh": { title: "Wisconsin Licensed Adult Family Home (AFH 3-4 Bed) Policy & Procedure Manual", file: "WI Licensed Adult Family Home (AFH 3-4 Bed) PP Manual.docx" },
+  "wi-rcac": { title: "Wisconsin Residential Care Apartment Complex (RCAC) Policy & Procedure Manual", file: "WI Residential Care Apartment Complex (RCAC) PP Manual.docx" },
 
   // ===== Employee Handbook line =====
   "ar-al-handbook": { title: "Arkansas Assisted Living Employee Handbook", file: "AR Assisted Living Employee Handbook.docx" },
