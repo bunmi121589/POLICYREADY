@@ -34,6 +34,14 @@ const PRODUCTS = {
   'ca-agency': { title: 'Policy & Procedure Manual for Family Home Agency - FHA (California)', file: 'CA_FamilyHomeAgency_JC_FINAL.docx' },
   'oh-individual': { title: 'Policy & Procedure Manual for Shared Living Independent Provider (Ohio)', file: 'OH_Individual_SharedLiving_Provider_JC_FINAL.docx' },
   'oh-agency': { title: 'Policy & Procedure Manual for Shared Living Agency Provider (Ohio)', file: 'OH_Agency_SharedLiving_Provider_JC_FINAL.docx' },
+  'tn-individual': { title: 'Policy & Procedure Manual for Family Model Residential (Host Home) Provider (Tennessee)', file: 'TN_Individual_HostHome_PP_Manual.docx' },
+  'tn-agency': { title: 'Policy & Procedure Manual for Family Model Residential (Host Home) Provider Agency (Tennessee)', file: 'TN_Agency_HostHome_PP_Manual.docx' },
+  'va-individual': { title: 'Policy & Procedure Manual for Sponsored Residential Provider (Virginia)', file: 'VA_Individual_HostHome_PP_Manual.docx' },
+  'va-agency': { title: 'Policy & Procedure Manual for Sponsored Residential Provider Agency (Virginia)', file: 'VA_Agency_HostHome_PP_Manual.docx' },
+  'sc-individual': { title: 'Policy & Procedure Manual for Community Training Home (CTH-I) Host-Family Provider (South Carolina)', file: 'SC_Individual_HostHome_PP_Manual.docx' },
+  'sc-agency': { title: 'Policy & Procedure Manual for Community Training Home / Residential Habilitation Provider Agency (South Carolina)', file: 'SC_Agency_HostHome_PP_Manual.docx' },
+  'wi-individual': { title: 'Policy & Procedure Manual for Certified 1-2 Bed Adult Family Home Operator (Wisconsin)', file: 'WI_Individual_HostHome_PP_Manual.docx' },
+  'wi-agency': { title: 'Policy & Procedure Manual for 1-2 Bed Adult Family Home Provider Agency (Wisconsin)', file: 'WI_Agency_HostHome_PP_Manual.docx' },
 
   // ===== Behavioral Health — Substance Use (SUD) line =====
   "co-bhe": { title: "Colorado Behavioral Health Entity (BHE) Base Policy & Procedure Manual", file: "CO Behavioral Health Entity (BHE) Base PP Manual.docx" },
