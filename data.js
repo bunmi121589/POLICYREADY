@@ -899,6 +899,27 @@ const STATES = [
     citation: "DBHDD Policy 02-704",
     manuals: [
       {
+        id: "ga-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in Georgia",
+        file: "How_to_Open_a_Group_Home_Business_in_Georgia.pdf",
+        pages: 13,
+        citation: "Georgia \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "ga-open-group-home",
+        summary: "The complete step-by-step guide to opening a Georgia group home or host home for adults with IDD under the NOW & COMP waivers \u2014 from where to start, through provider enrollment and licensing, all the way to your first payment. Covers both the host home / life-sharing path and your own CRA provider agency.",
+        details: "A plain-language, step-by-step playbook for opening a group home in Georgia, written for real people \u2014 not lawyers or consultants. It explains the DBHDD and DCH system and the NOW & COMP waivers, and covers both ways in: a host home / life-sharing site (1\u20132 adults) under an existing Community Residential Alternative (CRA) provider agency, or becoming your own CRA provider agency running group homes. Inside: the Georgia Collaborative ASO enrollment process (the New Provider Forum and Letter of Intent), the Community Living Arrangement (CLA) license through HFRD, exactly what your home must have (including the clear 7-or-more-beds sprinkler rule and the fire-safety inspection), how to get your first person placed, the CRA per-diem rate (separate host-home and group-home rate models by tier and home size) billed through GAMMIS with prior authorization, plus a who-to-call-and-what-to-ask section with worked examples for Atlanta and Augusta. Grounded in current Georgia DBHDD and DCH rules. General information, not legal, tax, or billing advice; verify current details with the State of Georgia.",
+        bullets: [
+          "Both paths: a host home under a CRA agency or your own CRA agency",
+          "Georgia Collaborative ASO enrollment and the CLA license through HFRD",
+          "The home: the clear 7-or-more-beds sprinkler rule and fire safety",
+          "CRA per-diem by tier and home size, billed through GAMMIS",
+          "Prior authorization, plus Atlanta & Augusta call scripts",
+        ],
+      },
+      {
         id: "ga-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Host Home/Life-Sharing Provider",
