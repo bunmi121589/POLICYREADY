@@ -1695,6 +1695,27 @@ const STATES = [
     citation: "0940-05",
     manuals: [
       {
+        id: "tn-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in Tennessee",
+        file: "How_to_Open_a_Group_Home_Business_in_Tennessee.pdf",
+        pages: 13,
+        citation: "Tennessee \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "tn-open-group-home",
+        summary: "The complete step-by-step guide to opening a Tennessee family model or group home for adults with IDD under ECF CHOICES \u2014 from where to start, through DIDD credentialing and MCO contracts, all the way to your first payment. Covers both the family model (host home) path and your own credentialed provider agency.",
+        details: "A plain-language, step-by-step playbook for opening a group home in Tennessee, written for real people \u2014 not lawyers or consultants. It explains Tennessee's managed-care model \u2014 you get credentialed by DIDD and then contract with the managed care organizations (BlueCare, Amerigroup/Wellpoint, UnitedHealthcare) to be paid \u2014 and the fact that the old 1915(c) waivers are closed, so all new members come through ECF CHOICES. It covers both ways in: providing family model residential (host home / CLS-FM, where a person lives with you, requiring a DIDD home study) or becoming your own credentialed provider agency running Community Living Supports / supported living homes (up to four residents). Inside: DIDD credentialing and the MCO contracts, what your home needs (the home study, DIDD life-safety inspections before occupancy and every 24\u201330 months, and fire safety), how to get your first person placed, how the rate works (set by TennCare by ECF CLS level, paid only for days served, billed to the MCO within 120 days), plus a who-to-call-and-what-to-ask section with worked examples for Nashville and Memphis. Grounded in current Tennessee DIDD and TennCare rules. General information, not legal, tax, or billing advice; verify current details with the State of Tennessee and the MCOs.",
+        bullets: [
+          "Tennessee's managed-care model: DIDD credentialing + MCO contracts",
+          "Both paths: family model (host home) or your own credentialed agency",
+          "The home study and DIDD life-safety inspections (every 24\u201330 months)",
+          "Rates set by TennCare by ECF CLS level, billed to the MCO",
+          "The old waivers are closed \u2014 new members come through ECF CHOICES, plus Nashville & Memphis scripts",
+        ],
+      },
+      {
         id: "tn-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Family Model Residential (Host Home) Provider",
