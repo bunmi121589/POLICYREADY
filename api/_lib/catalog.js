@@ -132,6 +132,7 @@ const PRODUCTS = {
   "tx-open-host-home": { title: "How to Open a Host Home Business in Texas", file: "How_to_Open_a_Host_Home_Business_in_Texas.pdf" },
   "fl-open-group-home": { title: "How to Open a Group Home Business in Florida", file: "How_to_Open_a_Group_Home_Business_in_Florida.pdf" },
   "oh-open-shared-living": { title: "How to Open a Shared Living (Host Home) Business in Ohio", file: "How_to_Open_a_Shared_Living_Business_in_Ohio.pdf" },
+  "ca-open-group-home": { title: "How to Open a Group Home Business in California", file: "How_to_Open_a_Group_Home_Business_in_California.pdf" },
 };
 
 function getProduct(slug) {
