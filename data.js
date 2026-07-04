@@ -1,4 +1,4 @@
-   // data.js — PolicyReady.org shared product data
+// data.js — PolicyReady.org shared product data
 // Used by shop.html, state.html, and manual.html
 //
 // NOTE: Manuals now carry their own regulatory context (agency, citation, pages,
