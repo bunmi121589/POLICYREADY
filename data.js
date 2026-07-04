@@ -600,6 +600,27 @@ const STATES = [
     citation: "26 TAC Ch. 263",
     manuals: [
       {
+        id: "tx-open-host-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Host Home Business in Texas",
+        file: "How_to_Open_a_Host_Home_Business_in_Texas.pdf",
+        pages: 15,
+        citation: "Texas \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "tx-open-host-home",
+        summary: "The complete step-by-step guide to opening a Texas HCS host home (Host Home / Companion Care) \u2014 from where to start, through your program provider and your home, all the way to your first Medicaid payment. Covers both going through a program provider and building your own.",
+        details: "A plain-language, step-by-step playbook for opening a host home in Texas under the HCS waiver, written for real people \u2014 not lawyers or consultants. It covers both ways in: providing Host Home / Companion Care under an existing HCS program provider for the fastest start, or becoming your own HCS program provider through HHSC open enrollment (with the program-manager competency exam and readiness review). Inside: the HHSC and LIDDA structure, the background screening, exactly what your home must have (including the truth about sprinklers and the two-means-of-escape rule under TAC 565.23), how to get your first resident placed, the real billing codes (HCPCS H2016 with Texas bill codes M0122\u2013M0126 by Level of Need) and how claims run through TMHP, plus a who-to-call-and-what-to-ask section with real phone scripts and worked examples for Houston and Dallas. Grounded in current Texas HHSC rules and the HCS bill-code crosswalk. General information, not legal, tax, or billing advice; verify current details with the State of Texas.",
+        bullets: [
+          "Both paths: through an HCS program provider or your own",
+          "HHSC + LIDDA structure, screening, and the program-manager exam",
+          "The home: sprinklers, the two-escape rule, and inspections \u2014 explained",
+          "Real billing codes: HCPCS H2016 + Texas bill codes M0122\u2013M0126 by LON",
+          "Claims through TMHP, plus Houston & Dallas call scripts",
+        ],
+      },
+      {
         id: "tx-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Host Home/Companion Care Provider",
