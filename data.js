@@ -413,6 +413,27 @@ const STATES = [
     citation: "65G-2 F.A.C.",
     manuals: [
       {
+        id: "fl-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in Florida",
+        file: "How_to_Open_a_Group_Home_Business_in_Florida.pdf",
+        pages: 13,
+        citation: "Florida \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "fl-open-group-home",
+        summary: "The complete step-by-step guide to opening a Florida group home or foster home for people with IDD under the iBudget waiver \u2014 from where to start, through APD licensing and your home, all the way to your first Medicaid payment. Covers both the small foster home and the larger group home.",
+        details: "A plain-language, step-by-step playbook for opening a group home or foster home in Florida under the iBudget waiver, written for real people \u2014 not lawyers or consultants. It covers both ways in: opening a small licensed foster home (up to 3 residents \u2014 the fast, low-cost start) or a larger group home (4\u201315 residents). Inside: the APD provider enrollment, the 65G-2 facility license and inspection, the \u201cFull\u201d AHCA Medicaid number, exactly what your home must have (fire code under 69A-38, sprinklers, the no-mobile-homes rule, and the section 419.001 zoning protection), how to get your first resident placed through a Waiver Support Coordinator, the real billing codes (HCPCS T2016 and T2025 for Residential Habilitation, daily rate by Level of Supports) and how claims run through FMMIS, plus a who-to-call-and-what-to-ask section with real phone scripts and worked examples for Miami and Tampa. Grounded in current Florida APD and AHCA rules. General information, not legal, tax, or billing advice; verify current details with the State of Florida.",
+        bullets: [
+          "Both paths: a small foster home (\u22643) or a group home (4\u201315)",
+          "APD enrollment, the 65G-2 license, and the \u201cFull\u201d AHCA Medicaid number",
+          "The home: fire code, sprinklers, and section 419.001 zoning \u2014 explained",
+          "Real billing codes: HCPCS T2016 / T2025 by Level of Supports",
+          "Claims through FMMIS, plus Miami & Tampa call scripts",
+        ],
+      },
+      {
         id: "fl-individual",
         edition: "Individual Operator",
         title: "Policy & Procedure Manual for Foster Care Facility Operator",
