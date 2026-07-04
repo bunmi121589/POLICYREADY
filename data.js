@@ -1056,6 +1056,27 @@ const STATES = [
     citation: "Title 17 CCR §56075",
     manuals: [
       {
+        id: "ca-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in California",
+        file: "How_to_Open_a_Group_Home_Business_in_California.pdf",
+        pages: 13,
+        citation: "California \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "ca-open-group-home",
+        summary: "The complete step-by-step guide to opening a California group home or family home for adults with IDD through the regional center system \u2014 from where to start, through vendorization and licensing, all the way to your first payment. Covers both the certified family home and the licensed Adult Residential Facility.",
+        details: "A plain-language, step-by-step playbook for opening a group home in California, written for real people \u2014 not lawyers or consultants. It explains the regional center system (DDS and 21 regional centers under the Lanterman Act) and covers both ways in: a certified family home through a Family Home Agency (the small, unlicensed, host-home-style option) or a licensed Adult Residential Facility / group home (Community Care Licensing under Title 22, vendored at a service level). Inside: how vendorization works (the online Provider Directory and the 45-day decision), the Certified Administrator requirement, exactly what your home must have (fire clearance, sprinklers, capacity tiers, and the six-or-fewer zoning protection), how to get your first resident placed, the real service codes (905 and 915 for ARFs with service levels 2\u20137, plus 896 and 520) under California's 2025 rate reform, how you bill the regional center monthly, plus a who-to-call-and-what-to-ask section with worked examples for Los Angeles and San Diego. Grounded in current California DDS and Community Care Licensing rules. General information, not legal, tax, or billing advice; verify current details with the State of California.",
+        bullets: [
+          "The regional center system and how vendorization unlocks payment",
+          "Both paths: a certified family home or a licensed ARF / group home",
+          "Fire clearance, sprinklers, capacity tiers, and the 6-or-fewer zoning protection",
+          "Real service codes: 905 / 915 by service level (2\u20137), plus 896 / 520",
+          "Billing the regional center monthly, plus Los Angeles & San Diego scripts",
+        ],
+      },
+      {
         id: "ca-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Family Home Provider (FHA)",
