@@ -217,6 +217,27 @@ const STATES = [
     citation: "A.A.C. R6-6-1101",
     manuals: [
       {
+        id: "az-open-dev-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Developmental Home Business in Arizona",
+        file: "How_to_Open_a_Developmental_Home_Business_in_Arizona.pdf",
+        pages: 15,
+        citation: "Arizona \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "az-open-dev-home",
+        summary: "The complete step-by-step guide to opening a licensed Adult Developmental Home \u2014 Arizona's host-home model \u2014 from where to start, through licensing and your home, all the way to your first payment. Covers both going through a licensing agency and building your own.",
+        details: "A plain-language, step-by-step playbook for opening an Adult Developmental Home in Arizona, written for real people \u2014 not lawyers or consultants. It covers both ways in: partnering with a DDD-contracted licensing agency for the fastest start, or becoming your own Qualified Vendor and billing AHCCCS/DDD yourself. Inside: the DES/DDD and OLCR licensing steps, the Fingerprint Clearance Card and background screening, exactly what your home must have (including the truth about sprinklers, exits, and the life-safety inspection), how to get your first resident placed, how the daily rate works (room and board plus habilitation, often non-taxable) and how to bill through WellSky, plus a who-to-call-and-what-to-ask section with real phone scripts and worked examples for Phoenix and Tucson. Grounded in current Arizona DES/DDD, AHCCCS, and OLCR rules. General information, not legal, tax, or billing advice; verify current details with the State of Arizona.",
+        bullets: [
+          "Both paths: through a licensing agency or your own Qualified Vendor",
+          "Licensing, Fingerprint Clearance Card, and background screening",
+          "The home: sprinklers, exits, and the life-safety inspection \u2014 explained",
+          "How the daily rate works (room & board + habilitation, often non-taxable)",
+          "Billing through WellSky, plus Phoenix & Tucson call scripts",
+        ],
+      },
+      {
         id: "az-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Developmental Home Provider",
