@@ -1195,6 +1195,27 @@ const STATES = [
     citation: "OAC 5123-9-33",
     manuals: [
       {
+        id: "oh-open-shared-living",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Shared Living (Host Home) Business in Ohio",
+        file: "How_to_Open_a_Shared_Living_Business_in_Ohio.pdf",
+        pages: 13,
+        citation: "Ohio \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "oh-open-shared-living",
+        summary: "The complete step-by-step guide to opening an Ohio Shared Living (host home) business for adults with IDD \u2014 from where to start, through DODD certification, all the way to your first payment. Includes the honest truth about why new group homes aren't an option in Ohio, and covers both the independent-provider and agency paths.",
+        details: "A plain-language, step-by-step playbook for opening an Ohio Shared Living home (formerly Adult Foster Care / Host Services) for adults with developmental disabilities, written for real people \u2014 not lawyers or consultants. It opens with a money-saving reality: Ohio caps licensed group-home beds statewide and that cap is reached, so Shared Living is the realistic path. It covers both ways in: becoming a certified independent provider (the fast, low-cost start) or an agency provider (employ staff, serve more people). Inside: the DODD and county-board structure, the BCI/FBI background checks and required training, the PNM/PSM application, what your home actually needs (and why Shared Living isn't a licensed facility), how to get your first person placed, how the daily rate works (by ODDP funding range, county category, and the 100/85/75/65 group-size math), how claims run through eMBS and PAWS, the EVV exemption and the difficulty-of-care tax perk, plus a who-to-call-and-what-to-ask section with worked examples for Columbus and Cleveland. Grounded in current Ohio DODD rules. General information, not legal, tax, or billing advice; verify current details with the State of Ohio.",
+        bullets: [
+          "The honest truth: why new group homes aren't an option in Ohio",
+          "Both paths: certified independent provider or agency provider",
+          "DODD certification, BCI checks, training, and the PNM/PSM application",
+          "The daily-rate system: ODDP range, county category, group-size math",
+          "eMBS/PAWS billing, the EVV exemption, plus Columbus & Cleveland scripts",
+        ],
+      },
+      {
         id: "oh-individual",
         edition: "Independent Provider",
         title: "Policy & Procedure Manual for Shared Living Independent Provider",
