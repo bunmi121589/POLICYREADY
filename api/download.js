@@ -32,7 +32,13 @@ module.exports = async function handler(req, res) {
     }
 
     const data = fs.readFileSync(filePath);
-    res.setHeader("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+    const TYPES = {
+      ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      ".pdf": "application/pdf",
+      ".zip": "application/zip",
+    };
+    const ext = path.extname(product.file).toLowerCase();
+    res.setHeader("Content-Type", TYPES[ext] || "application/octet-stream");
     res.setHeader("Content-Disposition", `attachment; filename="${product.file}"`);
     res.setHeader("Content-Length", data.length);
     res.setHeader("Cache-Control", "no-store");
