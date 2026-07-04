@@ -125,6 +125,9 @@ const PRODUCTS = {
   "tx-care-handbook": { title: "Texas Care Provider Employee Handbook", file: "TX_Care_Provider_Employee_Handbook.docx" },
   "va-care-handbook": { title: "Virginia Care Provider Employee Handbook", file: "VA_Care_Provider_Employee_Handbook.docx" },
   "wi-care-handbook": { title: "Wisconsin Care Provider Employee Handbook", file: "WI_Care_Provider_Employee_Handbook.docx" },
+
+  // ===== How-To / Business Startup Guides =====
+  "co-open-host-home": { title: "How to Open a Host Home Business in Colorado", file: "How_to_Open_a_Host_Home_Business_in_Colorado.pdf" },
 };
 
 function getProduct(slug) {
