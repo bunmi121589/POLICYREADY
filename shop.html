@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+<style>
+  .pr-search{max-width:640px;margin:20px auto 0;}
+  .pr-search input{width:100%;padding:14px 18px;font-size:16px;font-family:inherit;color:#1A1F1C;border:1.5px solid #d9d3c7;border-radius:10px;outline:none;box-sizing:border-box;}
+  .pr-search input:focus{border-color:#1A4731;box-shadow:0 0 0 3px rgba(26,71,49,0.12);}
+  .pr-empty{text-align:center;color:#6B7870;padding:44px 20px;font-size:16px;}
+  .nav-btn-train{background:#B86C1C !important;}
+</style>
 </head>
 <body>
 <nav>
@@ -18,14 +24,17 @@
     <a href="/how-it-works.html">How It Works</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
+    <a href="/training.html" class="nav-btn nav-btn-train">Browse Training</a>
     <a href="/shop.html" class="nav-btn">Browse Manuals</a>
   </div>
 </nav>
 <div class="shop-header">
-  <h1>Browse by State</h1>
-  <p>Click into your state to see the manuals available.</p>
+  <h1>Browse Manuals</h1>
+  <p>Search for a manual, or browse by state below.</p>
+  <div class="pr-search"><input id="searchBox" type="text" placeholder="Search manuals — e.g. Texas assisted living, host home, handbook"></div>
 </div>
 <div class="shop-grid" id="shopGrid"></div>
+<div class="state-manuals-grid" id="searchResults" style="display:none;"></div>
 <footer>
   <p style="margin-bottom:8px;">
     <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
@@ -37,17 +46,46 @@
 </footer>
 <script src="/data.js"></script>
 <script>
+  // Manuals only (exclude training guides — those live under Browse Training)
+  const MANUALS = [];
+  STATES.forEach(s => s.manuals.forEach(m => { if (m.type !== 'training') MANUALS.push({ ...m, stateName: s.name, stateId: s.id }); }));
+
   const grid = document.getElementById('shopGrid');
-  grid.innerHTML = STATES.map(s => `
+  const results = document.getElementById('searchResults');
+  const box = document.getElementById('searchBox');
+
+  grid.innerHTML = STATES.map(s => {
+    const count = s.manuals.filter(m => m.type !== 'training').length;
+    return `
     <a href="/state.html?id=${s.id}" class="shop-state-card">
       <div class="shop-state-stripe"></div>
       <div class="shop-state-body">
         <div class="shop-state-name">${s.name}</div>
-        <div class="shop-state-count">${s.manuals.length} manual${s.manuals.length === 1 ? '' : 's'} available</div>
+        <div class="shop-state-count">${count} manual${count === 1 ? '' : 's'} available</div>
       </div>
       <div class="shop-state-arrow">View ${s.name} Manuals →</div>
-    </a>
-  `).join('');
+    </a>`;
+  }).join('');
+
+  function card(m){
+    return `
+      <a href="/manual.html?id=${m.slug}" class="product-card">
+        <div class="card-stripe"></div>
+        <div class="card-body">
+          <span class="card-edition">${m.stateName} · ${m.edition}</span>
+          <div class="card-title">${m.title}</div>
+          <div class="card-summary">${m.summary}</div>
+          <div class="card-cta">View full details →</div>
+        </div>
+      </a>`;
+  }
+  box.addEventListener('input', () => {
+    const q = box.value.trim().toLowerCase();
+    if (!q) { grid.style.display=''; results.style.display='none'; results.innerHTML=''; return; }
+    grid.style.display='none'; results.style.display='';
+    const hits = MANUALS.filter(m => (m.title+' '+m.edition+' '+m.summary+' '+m.stateName+' '+(m.category||'')).toLowerCase().includes(q));
+    results.innerHTML = hits.length ? hits.map(card).join('') : '<div class="pr-empty">No manuals match that search. Try a state name or a program like “assisted living” or “host home.”</div>';
+  });
 </script>
 </body>
 </html>
