@@ -17,6 +17,7 @@
     <a href="/how-it-works.html">How It Works</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
+    <a href="/training.html" class="nav-btn nav-btn-train">Browse Training</a>
     <a href="/shop.html" class="nav-btn">Browse Manuals</a>
   </div>
 </nav>
@@ -49,6 +50,7 @@
     `;
   } else {
     const state = manual.state;
+    const isTraining = manual.type === 'training' || (manual.file || '').toLowerCase().endsWith('.pdf');
     // Each manual can carry its own regulatory context; fall back to the state's.
     const citation = manual.citation || state.citation;
     const policies = manual.policies || '24 policies across 6 sections, plus appendices';
@@ -57,8 +59,9 @@
 
     document.getElementById('manualHeader').innerHTML = `
       <div class="breadcrumb">
-        <a href="/shop.html">Browse by State</a> &nbsp;/&nbsp;
-        <a href="/state.html?id=${state.id}">${state.name}</a>
+        ${isTraining
+          ? `<a href="/training.html">Browse Training</a> &nbsp;/&nbsp; ${state.name}`
+          : `<a href="/shop.html">Browse by State</a> &nbsp;/&nbsp; <a href="/state.html?id=${state.id}">${state.name}</a>`}
       </div>
       <span class="manual-edition-tag">${editionTag}</span>
       <h1>${manual.title}</h1>
@@ -84,10 +87,9 @@
         <div class="buy-price-sub">One-time purchase · instant download</div>
         <button class="buy-btn" id="buyBtn" onclick="checkout('${manual.slug}')">Buy Now</button>
         <ul class="buy-includes">
-          <li>Editable Microsoft Word (.docx)</li>
-          <li>State-specific throughout</li>
-          <li>Aligned to ${citation}</li>
-          <li>Yours to keep and reuse</li>
+          ${isTraining
+            ? `<li>Instant PDF download</li><li>Plain-language, step by step</li><li>Both paths: through an agency or your own</li><li>Yours to keep and reuse</li>`
+            : `<li>Editable Microsoft Word (.docx)</li><li>State-specific throughout</li><li>Aligned to ${citation}</li><li>Yours to keep and reuse</li>`}
         </ul>
         <div class="buy-pagecount">${manual.pages} pages · ${policies}</div>
       </div>
