@@ -129,6 +129,7 @@ const PRODUCTS = {
   // ===== How-To / Business Startup Guides =====
   "co-open-host-home": { title: "How to Open a Host Home Business in Colorado", file: "How_to_Open_a_Host_Home_Business_in_Colorado.pdf" },
   "az-open-dev-home": { title: "How to Open a Developmental Home Business in Arizona", file: "How_to_Open_a_Developmental_Home_Business_in_Arizona.pdf" },
+  "tx-open-host-home": { title: "How to Open a Host Home Business in Texas", file: "How_to_Open_a_Host_Home_Business_in_Texas.pdf" },
 };
 
 function getProduct(slug) {
