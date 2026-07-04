@@ -134,6 +134,7 @@ const PRODUCTS = {
   "oh-open-shared-living": { title: "How to Open a Shared Living (Host Home) Business in Ohio", file: "How_to_Open_a_Shared_Living_Business_in_Ohio.pdf" },
   "ca-open-group-home": { title: "How to Open a Group Home Business in California", file: "How_to_Open_a_Group_Home_Business_in_California.pdf" },
   "ga-open-group-home": { title: "How to Open a Group Home Business in Georgia", file: "How_to_Open_a_Group_Home_Business_in_Georgia.pdf" },
+  "nm-open-group-home": { title: "How to Open a Group Home Business in New Mexico", file: "How_to_Open_a_Group_Home_Business_in_New_Mexico.pdf" },
 };
 
 function getProduct(slug) {
