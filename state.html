@@ -16,6 +16,7 @@
     <a href="/how-it-works.html">How It Works</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
+    <a href="/training.html" class="nav-btn nav-btn-train">Browse Training</a>
     <a href="/shop.html" class="nav-btn">Browse Manuals</a>
   </div>
 </nav>
@@ -49,7 +50,7 @@
       <h1>${state.name}</h1>
       <p class="program-line">State-specific policy &amp; procedure manuals, built to your state's regulations.</p>
     `;
-    document.getElementById('manualsGrid').innerHTML = state.manuals.map(m => `
+    document.getElementById('manualsGrid').innerHTML = state.manuals.filter(m => m.type !== 'training').map(m => `
       <a href="/manual.html?id=${m.slug}" class="product-card">
         <div class="card-stripe"></div>
         <div class="card-body">
