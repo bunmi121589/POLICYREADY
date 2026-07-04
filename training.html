@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Training — PolicyReady.org</title>
+  <meta name="description" content="Step-by-step guides on how to open a care business — by state and situation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .pr-search{max-width:640px;margin:20px auto 0;}
+    .pr-search input{width:100%;padding:14px 18px;font-size:16px;font-family:inherit;color:#1A1F1C;border:1.5px solid #d9d3c7;border-radius:10px;outline:none;box-sizing:border-box;}
+    .pr-search input:focus{border-color:#1A4731;box-shadow:0 0 0 3px rgba(26,71,49,0.12);}
+    .pr-empty{text-align:center;color:#6B7870;padding:44px 20px;font-size:16px;}
+    .nav-btn-train{background:#B86C1C !important;}
+    .train-sub{max-width:720px;margin:0 auto;color:#6B7870;}
+  </style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">Policy<span>Ready</span>.org</a>
+  <div class="nav-links">
+    <a href="/how-it-works.html">How It Works</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/training.html" class="nav-btn nav-btn-train">Browse Training</a>
+    <a href="/shop.html" class="nav-btn">Browse Manuals</a>
+  </div>
+</nav>
+<div class="shop-header">
+  <h1>Browse Training</h1>
+  <p class="train-sub">Step-by-step guides that walk you through opening a care business — from where to start all the way to your first payment. Different from our manuals: the manuals are the paperwork; these guides show you what to do.</p>
+  <div class="pr-search"><input id="searchBox" type="text" placeholder="Search training — e.g. Colorado host home, assisted living"></div>
+</div>
+<div class="state-manuals-grid" id="trainGrid"></div>
+<footer>
+  <p style="margin-bottom:8px;">
+    <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
+    <a href="/how-it-works.html">How It Works</a> &nbsp;·&nbsp;
+    <a href="/about.html">About</a> &nbsp;·&nbsp;
+    <a href="/shop.html">Browse Manuals</a>
+  </p>
+  <p>These guides are general information and do not constitute legal, tax, or billing advice. Verify current regulatory requirements, rates, and codes with your state agency before you act.</p>
+  <p style="margin-top:10px;">Contact: <a href="mailto:hello@policyready.org">hello@policyready.org</a></p>
+</footer>
+<script src="/data.js"></script>
+<script>
+  const TRAINING = [];
+  STATES.forEach(s => s.manuals.forEach(m => { if (m.type === 'training') TRAINING.push({ ...m, stateName: s.name, stateId: s.id }); }));
+
+  const grid = document.getElementById('trainGrid');
+  const box = document.getElementById('searchBox');
+
+  function card(m){
+    return `
+      <a href="/manual.html?id=${m.slug}" class="product-card">
+        <div class="card-stripe"></div>
+        <div class="card-body">
+          <span class="card-edition">${m.stateName} · ${m.edition}</span>
+          <div class="card-title">${m.title}</div>
+          <div class="card-summary">${m.summary}</div>
+          <div class="card-cta">View full details →</div>
+        </div>
+      </a>`;
+  }
+  function render(list){
+    grid.innerHTML = list.length
+      ? list.map(card).join('')
+      : '<div class="pr-empty">No training guides match that search yet. More states and situations are on the way.</div>';
+  }
+  render(TRAINING);
+  box.addEventListener('input', () => {
+    const q = box.value.trim().toLowerCase();
+    render(!q ? TRAINING : TRAINING.filter(m => (m.title+' '+m.edition+' '+m.summary+' '+m.stateName+' '+(m.category||'')).toLowerCase().includes(q)));
+  });
+</script>
+</body>
+</html>
