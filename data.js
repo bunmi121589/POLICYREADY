@@ -781,6 +781,27 @@ const STATES = [
     citation: "8.314.5 NMAC",
     manuals: [
       {
+        id: "nm-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in New Mexico",
+        file: "How_to_Open_a_Group_Home_Business_in_New_Mexico.pdf",
+        pages: 13,
+        citation: "New Mexico \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "nm-open-group-home",
+        summary: "The complete step-by-step guide to opening a New Mexico Family Living or Supported Living home for adults with IDD under the DD Waiver \u2014 from where to start, through provider approval and enrollment, all the way to your first payment. Covers both the Family Living path and your own DD Waiver provider agency.",
+        details: "A plain-language, step-by-step playbook for opening a group home in New Mexico, written for real people \u2014 not lawyers or consultants. It explains the DDSD / Health Care Authority system and the DD Waiver, and covers both ways in: a Family Living home (1\u20132 adults who live with you) under an existing DD Waiver provider agency, or becoming your own DD Waiver Qualified Provider Agency running Supported Living homes (3 or fewer, priced in Categories 1\u20134). Inside: the honest reality of New Mexico's long Central Registry wait, the agency requirements (the $1M liability insurance, surety/fidelity bond, and accreditation), the home study and how New Mexico oversees homes through DHI/QMB surveys instead of a facility license, what your home needs (including safe water temperature and fire safety), how to get your first person placed off the allocation schedule, how the daily rate works (Family Living vs. Supported Living Categories 1\u20134, room and board paid from SSI), plus a who-to-call-and-what-to-ask section with worked examples for Albuquerque and Las Cruces. Grounded in current New Mexico DDSD rules. General information, not legal, tax, or billing advice; verify current details with the State of New Mexico.",
+        bullets: [
+          "Both paths: a Family Living home or your own DD Waiver agency",
+          "The honest truth about New Mexico's long Central Registry wait",
+          "Agency requirements: $1M insurance, surety/fidelity bond, accreditation",
+          "Homes overseen by DHI/QMB surveys, not a facility license",
+          "Daily rate by Supported Living Category (1\u20134), plus Albuquerque & Las Cruces scripts",
+        ],
+      },
+      {
         id: "nm-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Family Living Provider",
