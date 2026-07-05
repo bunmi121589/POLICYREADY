@@ -136,6 +136,7 @@ const PRODUCTS = {
   "ga-open-group-home": { title: "How to Open a Group Home Business in Georgia", file: "How_to_Open_a_Group_Home_Business_in_Georgia.pdf" },
   "nm-open-group-home": { title: "How to Open a Group Home Business in New Mexico", file: "How_to_Open_a_Group_Home_Business_in_New_Mexico.pdf" },
   "tn-open-group-home": { title: "How to Open a Group Home Business in Tennessee", file: "How_to_Open_a_Group_Home_Business_in_Tennessee.pdf" },
+  "sc-open-group-home": { title: "How to Open a Group Home Business in South Carolina", file: "How_to_Open_a_Group_Home_Business_in_South_Carolina.pdf" },
 };
 
 function getProduct(slug) {
