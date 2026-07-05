@@ -1873,6 +1873,27 @@ const STATES = [
     citation: "R.60-103 / R.61-93",
     manuals: [
       {
+        id: "sc-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in South Carolina",
+        file: "How_to_Open_a_Group_Home_Business_in_South_Carolina.pdf",
+        pages: 13,
+        citation: "South Carolina \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "sc-open-group-home",
+        summary: "The complete step-by-step guide to opening a South Carolina Community Training Home for adults with IDD under the ID/RD Waiver \u2014 from where to start, through provider enrollment and licensing, all the way to your first payment. Covers both the CTH-I family model and the CTH-II staffed group home.",
+        details: "A plain-language, step-by-step playbook for opening a group home in South Carolina, written for real people \u2014 not lawyers or consultants. It explains the system (the agency formerly called DDSN is now BHDD-OIDD, with SCDHHS as the Medicaid agency) and covers both ways in: a Community Training Home-I (CTH-I) \u2014 the family model, where up to two people live in your own home \u2014 or a Community Training Home-II (CTH-II) group home for up to four people, operated by your provider agency. Inside: how to connect with a sponsoring provider or DSN board, how to become a BHDD-OIDD provider and enroll with SC Medicaid, what your home needs (CTH-I follows the State Fire Marshal Foster Home Regulations, all homes are licensed annually, and each resident gets an HCBS lease), how to get your first person placed through the ID/RD Waiver, how the rate works (billed to SC Medicaid per the HCBS Waiver Fee Schedule, room and board separate), plus a who-to-call-and-what-to-ask section with worked examples for Columbia and Greenville. Grounded in current South Carolina BHDD-OIDD and SCDHHS rules. General information, not legal, tax, or billing advice; verify current details with the State of South Carolina.",
+        bullets: [
+          "Both paths: a CTH-I family model or a CTH-II staffed group home",
+          "The 2025 reorganization: DDSN is now BHDD-OIDD (with SCDHHS Medicaid)",
+          "CTH-I follows the State Fire Marshal Foster Home Regulations; annual licensing",
+          "Billed to SC Medicaid per the HCBS Waiver Fee Schedule",
+          "Local DSN boards, plus Columbia & Greenville call scripts",
+        ],
+      },
+      {
         id: "sc-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Community Training Home (CTH-I) Host-Family Provider",
