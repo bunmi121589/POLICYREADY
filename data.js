@@ -2054,6 +2054,27 @@ const STATES = [
     citation: "12VAC35-105",
     manuals: [
       {
+        id: "va-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in Virginia",
+        file: "How_to_Open_a_Group_Home_Business_in_Virginia.pdf",
+        pages: 13,
+        citation: "Virginia \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "va-open-group-home",
+        summary: "The complete step-by-step guide to opening a Virginia sponsored residential home or group home for adults with IDD under the DD Waivers \u2014 from where to start, through DBHDS licensing and DMAS enrollment, all the way to your first payment. Covers both the sponsored residential path and your own licensed agency.",
+        details: "A plain-language, step-by-step playbook for opening a group home in Virginia, written for real people \u2014 not lawyers or consultants. It explains Virginia's two-agency system (DBHDS licenses providers; DMAS/Medicaid enrolls and pays them) and the three DD waivers (Community Living, Family & Individual Supports, Building Independence), and covers both ways in: becoming a sponsored residential provider (a person lives in your home, and a DBHDS-licensed sponsoring agency holds the license and does the billing) or becoming your own DBHDS-licensed agency running group home residential. Inside: the honest reality of Virginia's 14,000+ waiting list, the licensing path (your regional CRC, the PREP orientation, the Letter of Intent, Human Rights policy approval, the Initial Provider Application in CONNECT, and DMAS enrollment), what your home needs (HCBS settings, licensing, and fire safety), how to get your first person placed (screening through your CSB, a waiver slot, and the SIS assessment), how the rate works (paid through the DD waiver by support-need tier, billed through WaMS, room and board separate), plus a who-to-call-and-what-to-ask section with worked examples for Northern Virginia and Virginia Beach. Grounded in current Virginia DBHDS and DMAS rules. General information, not legal, tax, or billing advice; verify current details with the Commonwealth of Virginia.",
+        bullets: [
+          "Both paths: a sponsored residential home or your own licensed agency",
+          "Virginia's two-agency system: DBHDS licenses, DMAS pays",
+          "The licensing path: CRC, PREP, Letter of Intent, CONNECT, then DMAS",
+          "Paid through the DD waiver by SIS support-need tier, billed via WaMS",
+          "The honest truth about the 14,000+ waitlist, plus N. Virginia & Virginia Beach scripts",
+        ],
+      },
+      {
         id: "va-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Sponsored Residential Provider (Sponsor)",
