@@ -1593,6 +1593,27 @@ const STATES = [
     citation: "OADAP Part 433 / OBHS",
     manuals: [
       {
+        id: "ar-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in Arkansas",
+        file: "How_to_Open_a_Group_Home_Business_in_Arkansas.pdf",
+        pages: 13,
+        citation: "Arkansas \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "ar-open-group-home",
+        summary: "The complete step-by-step guide to opening an Arkansas Supportive Living home for adults with IDD under the CES Waiver \u2014 from where to start, through DDS certification and the PASSE, all the way to your first payment. Covers both the home-setting path and your own certified provider agency.",
+        details: "A plain-language, step-by-step playbook for opening a group home in Arkansas, written for real people \u2014 not lawyers or consultants. It explains Arkansas's managed-care system \u2014 services run through the Community and Employment Support (CES) waiver operated by DDS, and every client is enrolled in a PASSE (Provider-led Arkansas Shared Savings Entity) that coordinates care and pays providers \u2014 and its main residential service, Supportive Living, which can happen in a person's own home, a family home, an apartment, or a provider-owned group home. It covers both ways in: providing Supportive Living in a small home setting (up to four unrelated adults) or becoming your own certified CES provider agency. Inside: the honest reality that new large group homes generally aren't the opening (the rules point to existing group homes, so plan around smaller settings), the certification path (the CES certification standards, the up-to-90-day DDS review, DMS Medicaid enrollment, and contracting with the PASSEs), what your home needs (licensing, HCBS settings, and fire safety), how to get your first person placed (the CES waitlist, an independent assessment, and a PASSE), how you get paid (set through the CES waiver, staffing prorated, billed to the PASSE, room and board separate), plus a who-to-call-and-what-to-ask section with worked examples for Little Rock and Northwest Arkansas. Grounded in current Arkansas DDS and DMS rules. General information, not legal, tax, or billing advice; verify current details with the State of Arkansas.",
+        bullets: [
+          "Both paths: Supportive Living in a home setting or your own certified agency",
+          "Arkansas's managed-care model: certified by DDS, paid through a PASSE",
+          "The honest truth: plan around smaller settings, not a new 14-bed home",
+          "Certification: standards, up-to-90-day DDS review, DMS, then PASSE contracts",
+          "Billed to the PASSE, room and board separate, plus Little Rock & NW Arkansas scripts",
+        ],
+      },
+      {
         id: "ar-sud",
         edition: "Alcohol & Drug (OADAP)",
         category: "Behavioral Health — Substance Use",
