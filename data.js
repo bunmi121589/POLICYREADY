@@ -1397,6 +1397,27 @@ const STATES = [
     citation: "DHS 75 / DHS 35",
     manuals: [
       {
+        id: "wi-open-group-home",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Group Home Business in Wisconsin",
+        file: "How_to_Open_a_Group_Home_Business_in_Wisconsin.pdf",
+        pages: 13,
+        citation: "Wisconsin \u00b7 2026",
+        policies: "Complete step-by-step guide, both paths",
+        slug: "wi-open-group-home",
+        summary: "The complete step-by-step guide to opening a Wisconsin adult family home for adults with IDD under Family Care and IRIS \u2014 from where to start, through certification or licensing, all the way to your first payment. Covers both the certified 1\u20132 bed home and the licensed 3\u20134 bed home.",
+        details: "A plain-language, step-by-step playbook for opening a group home in Wisconsin, written for real people \u2014 not lawyers or consultants. It explains Wisconsin's managed-care system \u2014 long-term care runs through Family Care (paid by managed care organizations) and IRIS (self-directed budgets), with the ADRC as the entry point \u2014 and the crucial difference between the two home sizes: a 1\u20132 bed adult family home is certified (you live in the home), while a 3\u20134 bed adult family home is licensed by DHS/DQA under DHS 88. Inside: how to confirm there's a service need in your municipality before you apply (a real Wisconsin gotcha), certification vs. the DQA license and survey, background checks and the 15 hours of required training (including fire safety and first aid), what your home needs (fire safety, safe water temperature, well-water testing, and checking local ordinances), how to get your first person placed through Family Care or IRIS, how you get paid (negotiated with the MCO or from the IRIS budget, room and board separate), plus a who-to-call-and-what-to-ask section with worked examples for Milwaukee and Madison. Grounded in current Wisconsin DHS rules. General information, not legal, tax, or billing advice; verify current details with the State of Wisconsin.",
+        bullets: [
+          "Both paths: a certified 1\u20132 bed home or a licensed 3\u20134 bed home",
+          "Wisconsin's model: Family Care (MCO) and IRIS (self-directed), via the ADRC",
+          "Confirm a service need in your municipality before you apply",
+          "Background checks + 15 hours training (fire safety & first aid); DHS 88",
+          "Paid by the MCO or the IRIS budget, plus Milwaukee & Madison scripts",
+        ],
+      },
+      {
         id: "wi-individual",
         edition: "Individual Provider",
         title: "Policy & Procedure Manual for Certified 1-2 Bed Adult Family Home Operator",
