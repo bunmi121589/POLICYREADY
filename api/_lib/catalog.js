@@ -12,8 +12,19 @@
 // and make data.js use the same slugs, OR replace PRODUCTS by importing data.js.
 // Everything else in this integration reads through getProduct().
 
-const PRICE_CENTS = 20000; // $200.00 — flat price for every manual
+const PRICE_CENTS = 20000;        // $200.00 — companion products: how-to guides, forms packets, employee handbooks
+const MANUAL_PRICE_CENTS = 50000; // $500.00 — policy & procedure manuals and manual add-ons
 const CURRENCY = "usd";
+
+// Price rule (keep in sync with manual.html):
+// A product is a $200 companion ONLY if it is a how-to guide (slug contains
+// "-open-"), a forms packet (slug ends "-forms"), or an employee handbook
+// (slug ends "-handbook"). Everything else — manuals and add-ons — is $500.
+function priceForSlug(slug) {
+  const s = String(slug || "");
+  const isCompanion = s.includes("-open-") || s.endsWith("-forms") || s.endsWith("-handbook");
+  return isCompanion ? PRICE_CENTS : MANUAL_PRICE_CENTS;
+}
 
 // slug: { title (shown at checkout), file (delivered .docx in api/_files/) }
 const PRODUCTS = {
@@ -126,6 +137,11 @@ const PRODUCTS = {
   "va-care-handbook": { title: "Virginia Care Provider Employee Handbook", file: "VA_Care_Provider_Employee_Handbook.docx" },
   "wi-care-handbook": { title: "Wisconsin Care Provider Employee Handbook", file: "WI_Care_Provider_Employee_Handbook.docx" },
 
+  // ===== Brain Injury Residential (Texas) line =====
+  "tx-brain-injury": { title: "Brain Injury Assisted Living Policy & Procedure Manual (Texas)", file: "TX_Brain_Injury_Assisted_Living_PP_Manual.docx" },
+  "tx-brain-injury-forms": { title: "Brain Injury Assisted Living Forms Packet (Texas)", file: "TX_Brain_Injury_Assisted_Living_Forms_Packet.docx" },
+  "tx-open-brain-injury-home": { title: "How to Open an Assisted Living Home for Adults with Brain Injury in Texas", file: "How_to_Open_an_Assisted_Living_Home_for_Brain_Injury_in_Texas.pdf" },
+
   // ===== How-To / Business Startup Guides =====
   "co-open-host-home": { title: "How to Open a Host Home Business in Colorado", file: "How_to_Open_a_Host_Home_Business_in_Colorado.pdf" },
   "az-open-dev-home": { title: "How to Open a Developmental Home Business in Arizona", file: "How_to_Open_a_Developmental_Home_Business_in_Arizona.pdf" },
@@ -147,4 +163,4 @@ function getProduct(slug) {
   return PRODUCTS[slug] || null;
 }
 
-module.exports = { PRODUCTS, PRICE_CENTS, CURRENCY, getProduct };
+module.exports = { PRODUCTS, PRICE_CENTS, MANUAL_PRICE_CENTS, CURRENCY, getProduct, priceForSlug };
