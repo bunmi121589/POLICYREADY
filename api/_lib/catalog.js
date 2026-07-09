@@ -147,6 +147,9 @@ const PRODUCTS = {
   "tx-brain-injury": { title: "Brain Injury Assisted Living Policy & Procedure Manual (Texas)", file: "TX_Brain_Injury_Assisted_Living_PP_Manual.docx" },
   "tx-brain-injury-forms": { title: "Brain Injury Assisted Living Forms Packet (Texas)", file: "TX_Brain_Injury_Assisted_Living_Forms_Packet.docx" },
   "tx-open-brain-injury-home": { title: "How to Open an Assisted Living Home for Adults with Brain Injury in Texas", file: "How_to_Open_an_Assisted_Living_Home_for_Brain_Injury_in_Texas.pdf" },
+  "fl-brain-injury": { title: "Brain Injury Transitional Living Facility Policy & Procedure Manual (Florida)", file: "FL_Brain_Injury_TLF_PP_Manual.docx" },
+  "fl-brain-injury-forms": { title: "Brain Injury Transitional Living Facility Forms Packet (Florida)", file: "FL_Brain_Injury_TLF_Forms_Packet.docx" },
+  "fl-open-brain-injury-home": { title: "How to Open a Brain Injury Transitional Living Facility in Florida", file: "How_to_Open_a_Brain_Injury_Transitional_Living_Facility_in_Florida.pdf" },
 
   // ===== How-To / Business Startup Guides =====
   "co-open-host-home": { title: "How to Open a Host Home Business in Colorado", file: "How_to_Open_a_Host_Home_Business_in_Colorado.pdf" },
