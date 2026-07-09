@@ -55,6 +55,8 @@
     const citation = manual.citation || state.citation;
     const policies = manual.policies || '24 policies across 6 sections, plus appendices';
     const editionTag = manual.edition + (manual.category ? '' : ' Edition');
+    // Price rule — keep in sync with api/_lib/catalog.js priceForSlug()
+    const priceDollars = (function(s){ s = String(s || ''); return (s.includes('-open-') || s.endsWith('-forms') || s.endsWith('-handbook')) ? 200 : 500; })(manual.slug);
     document.title = `${manual.title} — PolicyReady.org`;
 
     document.getElementById('manualHeader').innerHTML = `
@@ -83,7 +85,7 @@
       </div>
 
       <div class="buy-sidebar">
-        <div class="buy-price">$200</div>
+        <div class="buy-price">$${priceDollars}</div>
         <div class="buy-price-sub">One-time purchase · instant download</div>
         <button class="buy-btn" id="buyBtn" onclick="checkout('${manual.slug}')">Buy Now</button>
         <ul class="buy-includes">
