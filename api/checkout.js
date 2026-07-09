@@ -3,7 +3,7 @@
 // (This is the endpoint your manual.html buy button already calls. It replaces
 //  create-checkout-session.js — you can delete that older file.)
 const { stripe, siteUrl } = require("./_lib/stripe");
-const { getProduct, PRICE_CENTS, CURRENCY } = require("./_lib/catalog");
+const { getProduct, priceForSlug, CURRENCY } = require("./_lib/catalog");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
@@ -29,7 +29,7 @@ module.exports = async function handler(req, res) {
           quantity: 1,
           price_data: {
             currency: CURRENCY,
-            unit_amount: PRICE_CENTS, // $200.00, flat for every manual
+            unit_amount: priceForSlug(slug), // $500 manuals & add-ons, $200 guides/forms/handbooks
             product_data: {
               name: product.title,
               description: "Editable Microsoft Word (.docx) policy & procedure manual — instant download.",
