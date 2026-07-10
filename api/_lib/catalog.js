@@ -22,7 +22,7 @@ const CURRENCY = "usd";
 // (slug ends "-handbook"). Everything else — manuals and add-ons — is $500.
 function priceForSlug(slug) {
   const s = String(slug || "");
-  const isCompanion = s.includes("-open-") || s.endsWith("-forms") || s.endsWith("-handbook");
+  const isCompanion = s.includes("-open-") || s.endsWith("-forms") || s.endsWith("-handbook") || s.includes("referral");
   return isCompanion ? PRICE_CENTS : MANUAL_PRICE_CENTS;
 }
 
@@ -163,6 +163,7 @@ const PRODUCTS = {
   "ca-open-home-care": { title: "How to Open a Non-Medical Home Care Agency in California", file: "How_to_Open_a_Non-Medical_Home_Care_Agency_in_California.pdf" },
   "ca-home-care-handbook": { title: "Non-Medical Home Care Caregiver Handbook (California)", file: "CA_Home_Care_Caregiver_Handbook.docx" },
   "ca-home-care-forms": { title: "Non-Medical Home Care Forms Packet (California)", file: "CA_Home_Care_Forms_Packet.docx" },
+  "ca-referral-system": { title: "The Referral System (California Edition)", file: "The_Referral_System_California_Edition.docx" },
 
   // ===== How-To / Business Startup Guides =====
   "co-open-host-home": { title: "How to Open a Host Home Business in Colorado", file: "How_to_Open_a_Host_Home_Business_in_Colorado.pdf" },
