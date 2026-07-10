@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <style>
+    .state-header h2{font-family:'Playfair Display',serif;color:#1A4731;font-size:1.7rem;margin:0 0 6px;}
+  </style>
 </head>
 <body>
 <nav>
@@ -22,6 +25,8 @@
 </nav>
 <div class="state-header" id="stateHeader"></div>
 <div class="state-manuals-grid" id="manualsGrid"></div>
+<div class="state-header" id="trainHead" style="display:none;"></div>
+<div class="state-manuals-grid" id="trainingGrid"></div>
 <footer>
   <p style="margin-bottom:8px;">
     <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
@@ -50,7 +55,7 @@
       <h1>${state.name}</h1>
       <p class="program-line">State-specific policy &amp; procedure manuals, built to your state's regulations.</p>
     `;
-    document.getElementById('manualsGrid').innerHTML = state.manuals.filter(m => m.type !== 'training').map(m => `
+    const card = m => `
       <a href="/manual.html?id=${m.slug}" class="product-card">
         <div class="card-stripe"></div>
         <div class="card-body">
@@ -59,8 +64,14 @@
           <div class="card-summary">${m.summary}</div>
           <div class="card-cta">View full details →</div>
         </div>
-      </a>
-    `).join('');
+      </a>`;
+    document.getElementById('manualsGrid').innerHTML = state.manuals.filter(m => m.type !== 'training').map(card).join('');
+    const training = state.manuals.filter(m => m.type === 'training');
+    if (training.length) {
+      document.getElementById('trainHead').style.display = '';
+      document.getElementById('trainHead').innerHTML = `<h2>Guides &amp; Resources</h2><p class="program-line">How-to guides and referral systems for ${state.name} — the training and tools that go with the manuals.</p>`;
+      document.getElementById('trainingGrid').innerHTML = training.map(card).join('');
+    }
   }
 </script>
 </body>
