@@ -56,7 +56,7 @@
     const policies = manual.policies || '24 policies across 6 sections, plus appendices';
     const editionTag = manual.edition + (manual.category ? '' : ' Edition');
     // Price rule — keep in sync with api/_lib/catalog.js priceForSlug()
-    const priceDollars = (function(s){ s = String(s || ''); return (s.includes('-open-') || s.endsWith('-forms') || s.endsWith('-handbook')) ? 200 : 500; })(manual.slug);
+    const priceDollars = (function(s){ s = String(s || ''); return (s.includes('-open-') || s.endsWith('-forms') || s.endsWith('-handbook') || s.includes('referral')) ? 200 : 500; })(manual.slug);
     document.title = `${manual.title} — PolicyReady.org`;
 
     document.getElementById('manualHeader').innerHTML = `
