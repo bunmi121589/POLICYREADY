@@ -13,6 +13,9 @@
     .pr-search{max-width:640px;margin:20px auto 0;}
     .pr-search input{width:100%;padding:14px 18px;font-size:16px;font-family:inherit;color:#1A1F1C;border:1.5px solid #d9d3c7;border-radius:10px;outline:none;box-sizing:border-box;}
     .pr-search input:focus{border-color:#1A4731;box-shadow:0 0 0 3px rgba(26,71,49,0.12);}
+    .pr-filter{max-width:640px;margin:12px auto 0;}
+    .pr-filter select{width:100%;padding:12px 16px;font-size:15px;font-family:inherit;color:#1A1F1C;border:1.5px solid #d9d3c7;border-radius:10px;background:#fff;outline:none;box-sizing:border-box;cursor:pointer;}
+    .pr-filter select:focus{border-color:#1A4731;box-shadow:0 0 0 3px rgba(26,71,49,0.12);}
     .pr-empty{text-align:center;color:#6B7870;padding:44px 20px;font-size:16px;}
     .nav-btn-train{background:#B86C1C !important;}
     .train-sub{max-width:720px;margin:0 auto;color:#6B7870;}
@@ -33,6 +36,7 @@
   <h1>Browse Training</h1>
   <p class="train-sub">Step-by-step guides that walk you through opening a care business — from where to start all the way to your first payment. Different from our manuals: the manuals are the paperwork; these guides show you what to do.</p>
   <div class="pr-search"><input id="searchBox" type="text" placeholder="Search training — e.g. Colorado host home, assisted living"></div>
+  <div class="pr-filter"><select id="stateFilter" aria-label="Filter training by state"></select></div>
 </div>
 <div class="state-manuals-grid" id="trainGrid"></div>
 <footer>
@@ -52,6 +56,10 @@
 
   const grid = document.getElementById('trainGrid');
   const box = document.getElementById('searchBox');
+  const sel = document.getElementById('stateFilter');
+
+  const statesWithTraining = [...new Map(TRAINING.map(m => [m.stateId, m.stateName])).entries()].sort((a, b) => a[1].localeCompare(b[1]));
+  sel.innerHTML = '<option value="">All states</option>' + statesWithTraining.map(([id, name]) => `<option value="${id}">${name}</option>`).join('');
 
   function card(m){
     return `
@@ -70,11 +78,17 @@
       ? list.map(card).join('')
       : '<div class="pr-empty">No training guides match that search yet. More states and situations are on the way.</div>';
   }
-  render(TRAINING);
-  box.addEventListener('input', () => {
+  function apply(){
     const q = box.value.trim().toLowerCase();
-    render(!q ? TRAINING : TRAINING.filter(m => (m.title+' '+m.edition+' '+m.summary+' '+m.stateName+' '+(m.category||'')).toLowerCase().includes(q)));
-  });
+    const st = sel.value;
+    let list = TRAINING;
+    if (st) list = list.filter(m => m.stateId === st);
+    if (q) list = list.filter(m => (m.title+' '+m.edition+' '+m.summary+' '+m.stateName+' '+(m.category||'')).toLowerCase().includes(q));
+    render(list);
+  }
+  render(TRAINING);
+  box.addEventListener('input', apply);
+  sel.addEventListener('change', apply);
 </script>
 </body>
 </html>
