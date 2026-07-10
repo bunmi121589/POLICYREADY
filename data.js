@@ -1,4 +1,3 @@
-
 // data.js — PolicyReady.org shared product data
 // Used by shop.html, state.html, and manual.html
 //
@@ -1709,6 +1708,27 @@ const STATES = [
           "Registration & Live Scan logs, TB, the 5+5 training record & code of conduct",
           "EVV-aligned visit note, client-funds log & billing reconciliation (T1019 / U6)",
           "Abuse reporting (California), HIPAA/BAA, care plan & outcomes forms",
+        ],
+      },
+      {
+        id: "ca-referral-system",
+        type: "training",
+        edition: "Referral Resource",
+        category: "Referral Resources",
+        title: "The Referral System (California Edition)",
+        file: "The_Referral_System_California_Edition.docx",
+        pages: 22,
+        citation: "California \u00b7 Cross-Program \u00b7 2026",
+        policies: "Playbook + verified directory + worksheets",
+        slug: "ca-referral-system",
+        summary: "A complete referral-building system for California care providers \u2014 the strategy to earn steady referrals, a verified directory of California and national referral contacts, and the worksheets to run it week to week. Works across home care, residential care, brain-injury, and behavioral-health programs.",
+        details: "Three resources in one. First, the Playbook: how care providers actually get clients \u2014 who refers (hospital discharge planners, skilled-nursing facilities, physicians, geriatric care managers, the aging network, senior communities, payers, elder-law attorneys, and more), the official pathways into their referral pipelines (getting onto discharge lists, payer contracting, waiver enrollment, and preferred-provider agreements), what each source wants, how to approach them, scripts, how to become a preferred provider, and \u2014 importantly \u2014 the legal line, so you build referrals without running afoul of the federal Anti-Kickback Statute and state patient-brokering laws. Second, the verified California Referral Directory: real, current phone numbers and websites for the resources that matter \u2014 the Eldercare Locator and national gateways, the California Department of Aging and the Aging & Disability Resource Connection, HICAP, Medi-Cal and the HCBA waiver, Adult Protective Services and the Long-Term Care Ombudsman, the regional centers, CalVet, your CDSS and CDPH regulators, and the CAHSAH and hospital associations for networking \u2014 plus a guide to finding your county-level contacts and expanding to other states. Third, the Worksheets & Tracker: a ready-to-use weekly system \u2014 a master source list, your Target 25, an outreach planner, contact and referral logs, a source scorecard, a preferred-provider self-assessment, outreach templates, and a one-page leave-behind builder. General business guidance, not legal advice; follow all applicable anti-kickback and referral laws, and verify every contact before you rely on it.",
+        bullets: [
+          "A complete referral system: the playbook, a verified directory, and the worksheets",
+          "Who refers, the official pathways in, and the scripts to reach them",
+          "The legal line \u2014 build referrals without violating anti-kickback law",
+          "Verified California & national referral contacts (phone numbers & websites)",
+          "Target-25 planner, contact & referral logs, scorecard & outreach templates",
         ],
       },
     ],
