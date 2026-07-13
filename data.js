@@ -385,6 +385,28 @@ const STATES = [
     citation: "A.A.C. R6-6-1101",
     manuals: [
       {
+        id: "az-open-bhrf",
+        type: "training",
+        edition: "Business Startup Guide",
+        category: "How-To Guides",
+        title: "How to Open a Behavioral Health Residential Facility (BHRF) in Arizona",
+        file: "How_to_Open_a_Behavioral_Health_Residential_Facility_in_Arizona.pdf",
+        pages: 13,
+        slug: "az-open-bhrf",
+        agency: "AZDHS / AHCCCS",
+        citation: "A.A.C. R9-10 Art. 7 \u00b7 AHCCCS AMPM 320-V",
+        policies: "Complete step-by-step startup guide",
+        summary: "The complete step-by-step guide to opening a licensed Behavioral Health Residential Facility (BHRF) in Arizona \u2014 24-hour residential treatment for mental health and substance use \u2014 from the ADHS Article 7 license through AHCCCS enrollment and your first authorized admission. Written to pair with the BHRF Policy & Procedure Manual.",
+        details: "A plain-language playbook for opening a BHRF in Arizona, written for real people. It clears up what a BHRF actually is \u2014 a licensed, 24-hour residential treatment setting, not a sober living home or an outpatient clinic \u2014 and walks the two gates every operator must clear: the ADHS behavioral health facility license under A.A.C. Title 9, Chapter 10, Article 7, and the AHCCCS provider contract. Inside: choosing your population (mental health, substance use, or both) and capacity (the 10-bed clinical-director line), the ADHS application, fees, physical-plant and fire-inspection requirements, building your clinical team (administrator, Behavioral Health Professional, and technicians with Fingerprint Clearance Cards), how care actually works from referral and prior authorization through assessment, treatment plan, and discharge, MAT non-exclusion, and how you get paid \u2014 the H0018 per-diem, the critical fact that the AHCCCS rate does NOT include room and board, and real strategies to cover that gap. Includes a startup sequence, common mistakes, a who-to-call section, and two worked examples. Grounded in current ADHS and AHCCCS rules. General information, not legal, clinical, or billing advice; verify current details with the State of Arizona and AHCCCS.",
+        bullets: [
+          "What a BHRF is \u2014 and how it differs from a sober living home or outpatient clinic",
+          "The two gates: the ADHS Article 7 license and the AHCCCS provider contract",
+          "Capacity, physical plant, fire inspection, and the 10-bed clinical-director line",
+          "The clinical team \u2014 administrator, Behavioral Health Professional, and technicians",
+          "Getting paid: the H0018 per-diem and covering the room-and-board gap",
+        ],
+      },
+      {
         id: "az-home-care",
         edition: "Policy & Procedure Manual",
         category: "Home Care \u2014 Non-Medical (No State License)",
