@@ -235,6 +235,7 @@ const PRODUCTS = {
   "az-home-care-handbook": { title: "Arizona Non-Medical Home Care Caregiver Handbook", file: "AZ_Home_Care_Caregiver_Handbook.docx" },
   "az-home-care-forms": { title: "Arizona Non-Medical Home Care Forms Packet", file: "AZ_Home_Care_Forms_Packet.docx" },
   "az-referral-system": { title: "The Referral System \u2014 Arizona Edition", file: "The_Referral_System_Arizona_Edition.docx" },
+  "az-open-bhrf": { title: "How to Open a Behavioral Health Residential Facility (BHRF) in Arizona", file: "How_to_Open_a_Behavioral_Health_Residential_Facility_in_Arizona.pdf" },
 };
 
 function getProduct(slug) {
