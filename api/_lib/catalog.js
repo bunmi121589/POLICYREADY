@@ -237,6 +237,9 @@ const PRODUCTS = {
   "az-referral-system": { title: "The Referral System \u2014 Arizona Edition", file: "The_Referral_System_Arizona_Edition.docx" },
   "az-open-bhrf": { title: "How to Open a Behavioral Health Residential Facility (BHRF) in Arizona", file: "How_to_Open_a_Behavioral_Health_Residential_Facility_in_Arizona.pdf" },
   "az-open-otc": { title: "How to Open an Outpatient Treatment Center (OTC) in Arizona", file: "How_to_Open_an_Outpatient_Treatment_Center_in_Arizona.pdf" },
+  // ===== Oregon =====
+  "or-home-care": { title: "Oregon In-Home Care Agency Policy & Procedure Manual", file: "OR_Home_Care_PP_Manual.docx" },
+  "or-residential-care": { title: "Oregon Residential Care & Assisted Living Policy & Procedure Manual", file: "OR_RCF_ALF_PP_Manual.docx" },
 };
 
 function getProduct(slug) {
