@@ -240,6 +240,10 @@ const PRODUCTS = {
   // ===== Oregon =====
   "or-home-care": { title: "Oregon In-Home Care Agency Policy & Procedure Manual", file: "OR_Home_Care_PP_Manual.docx" },
   "or-residential-care": { title: "Oregon Residential Care & Assisted Living Policy & Procedure Manual", file: "OR_RCF_ALF_PP_Manual.docx" },
+  "or-open-home-care": { title: "How to Open an In-Home Care Agency in Oregon", file: "How_to_Open_an_In_Home_Care_Agency_in_Oregon.pdf" },
+  "or-home-care-handbook": { title: "Caregiver Handbook for an Oregon In-Home Care Agency", file: "OR_Home_Care_Caregiver_Handbook.docx" },
+  "or-home-care-forms": { title: "Forms Packet for an Oregon In-Home Care Agency", file: "OR_Home_Care_Forms_Packet.docx" },
+  "or-referral-system": { title: "The Referral System \u2014 Oregon Edition", file: "The_Referral_System_Oregon_Edition.docx" },
 };
 
 function getProduct(slug) {
