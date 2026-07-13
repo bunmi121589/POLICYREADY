@@ -1,4 +1,4 @@
-// catalog.js — single source of truth for what can be purchased and delivered.
+// catalog.js \u2014 single source of truth for what can be purchased and delivered.
 //
 // Every manual is a flat $200. Stripe does NOT need a product/price created for
 // each one: the checkout function builds a $200 line item on the fly and stores
@@ -12,14 +12,14 @@
 // and make data.js use the same slugs, OR replace PRODUCTS by importing data.js.
 // Everything else in this integration reads through getProduct().
 
-const PRICE_CENTS = 20000;        // $200.00 — companion products: how-to guides, forms packets, employee handbooks
-const MANUAL_PRICE_CENTS = 50000; // $500.00 — policy & procedure manuals and manual add-ons
+const PRICE_CENTS = 20000;        // $200.00 \u2014 companion products: how-to guides, forms packets, employee handbooks
+const MANUAL_PRICE_CENTS = 50000; // $500.00 \u2014 policy & procedure manuals and manual add-ons
 const CURRENCY = "usd";
 
 // Price rule (keep in sync with manual.html):
 // A product is a $200 companion ONLY if it is a how-to guide (slug contains
 // "-open-"), a forms packet (slug ends "-forms"), or an employee handbook
-// (slug ends "-handbook"). Everything else — manuals and add-ons — is $500.
+// (slug ends "-handbook"). Everything else \u2014 manuals and add-ons \u2014 is $500.
 function priceForSlug(slug) {
   const s = String(slug || "");
   const isCompanion = s.includes("-open-") || s.endsWith("-forms") || s.endsWith("-handbook") || s.includes("referral");
@@ -54,7 +54,7 @@ const PRODUCTS = {
   'wi-individual': { title: 'Policy & Procedure Manual for Certified 1-2 Bed Adult Family Home Operator (Wisconsin)', file: 'WI_Individual_HostHome_PP_Manual.docx' },
   'wi-agency': { title: 'Policy & Procedure Manual for 1-2 Bed Adult Family Home Provider Agency (Wisconsin)', file: 'WI_Agency_HostHome_PP_Manual.docx' },
 
-  // ===== Behavioral Health — Substance Use (SUD) line =====
+  // ===== Behavioral Health \u2014 Substance Use (SUD) line =====
   "co-bhe": { title: "Colorado Behavioral Health Entity (BHE) Base Policy & Procedure Manual", file: "CO Behavioral Health Entity (BHE) Base PP Manual.docx" },
   "co-bhe-outpatient-addon": { title: "Colorado BHE Outpatient Endorsement Add-On", file: "CO BHE Outpatient Endorsement Add-On.docx" },
   "co-bhe-residential-addon": { title: "Colorado BHE Residential & Withdrawal Management Endorsement Add-On", file: "CO BHE Residential & Withdrawal Management Endorsement Add-On.docx" },
@@ -106,7 +106,12 @@ const PRODUCTS = {
   "tn-open-home-care": { title: "How to Open a Home Care Agency in Tennessee", file: "How_to_Open_a_Home_Care_Agency_in_Tennessee.pdf" },
   "tn-home-care-handbook": { title: "Tennessee Personal Support Services Agency (PSSA) Caregiver Handbook", file: "TN_Home_Care_Caregiver_Handbook.docx" },
   "tn-home-care-forms": { title: "Tennessee Personal Support Services Agency (PSSA) Forms Packet", file: "TN_Home_Care_Forms_Packet.docx" },
-  "tn-referral-system": { title: "The Referral System — Tennessee Edition", file: "The_Referral_System_Tennessee_Edition.docx" },
+  "tn-referral-system": { title: "The Referral System \u2014 Tennessee Edition", file: "The_Referral_System_Tennessee_Edition.docx" },
+  "va-home-care": { title: "Home Care Organization Policy & Procedure Manual", file: "VA_Home_Care_PP_Manual.docx" },
+  "va-open-home-care": { title: "How to Open a Home Care Agency in Virginia", file: "How_to_Open_a_Home_Care_Agency_in_Virginia.pdf" },
+  "va-home-care-handbook": { title: "Home Care Caregiver Handbook (Virginia)", file: "VA_Home_Care_Caregiver_Handbook.docx" },
+  "va-home-care-forms": { title: "Home Care Organization Forms Packet (Virginia)", file: "VA_Home_Care_Forms_Packet.docx" },
+  "va-referral-system": { title: "The Referral System \u2014 Virginia Edition", file: "The_Referral_System_Virginia_Edition.docx" },
   "tx-al-type-ab": { title: "Texas Assisted Living Type A and B Policy & Procedure Manual", file: "TX Assisted Living Type A and B PP Manual.docx" },
   "va-alf": { title: "Virginia Assisted Living Facility (ALF) Policy & Procedure Manual", file: "VA Assisted Living Facility (ALF) PP Manual.docx" },
   "wi-cbrf": { title: "Wisconsin Community-Based Residential Facility (CBRF) Policy & Procedure Manual", file: "WI Community-Based Residential Facility (CBRF) PP Manual.docx" },
