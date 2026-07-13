@@ -229,6 +229,12 @@ const PRODUCTS = {
   "wi-open-group-home": { title: "How to Open a Group Home Business in Wisconsin", file: "How_to_Open_a_Group_Home_Business_in_Wisconsin.pdf" },
   "va-open-group-home": { title: "How to Open a Group Home Business in Virginia", file: "How_to_Open_a_Group_Home_Business_in_Virginia.pdf" },
   "ar-open-group-home": { title: "How to Open a Group Home Business in Arkansas", file: "How_to_Open_a_Group_Home_Business_in_Arkansas.pdf" },
+  // ===== Arizona Non-Medical Home Care line (no state license) =====
+  "az-home-care": { title: "Arizona Non-Medical Home Care Policy & Procedure Manual", file: "AZ_Home_Care_PP_Manual.docx" },
+  "az-open-home-care": { title: "How to Open a Non-Medical Home Care Agency in Arizona", file: "How_to_Open_a_Home_Care_Agency_in_Arizona.pdf" },
+  "az-home-care-handbook": { title: "Arizona Non-Medical Home Care Caregiver Handbook", file: "AZ_Home_Care_Caregiver_Handbook.docx" },
+  "az-home-care-forms": { title: "Arizona Non-Medical Home Care Forms Packet", file: "AZ_Home_Care_Forms_Packet.docx" },
+  "az-referral-system": { title: "The Referral System \u2014 Arizona Edition", file: "The_Referral_System_Arizona_Edition.docx" },
 };
 
 function getProduct(slug) {
