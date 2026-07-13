@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <style>
+    .states-strip a.state-pill{ text-decoration:none; cursor:pointer; transition:filter .15s ease; }
+    .states-strip a.state-pill:hover{ filter:brightness(0.94); text-decoration:underline; }
+  </style>
 </head>
 <body>
 
@@ -37,19 +41,7 @@
 <!-- STATES STRIP -->
 <div class="states-strip">
   <span>Available now:</span>
-  <span class="state-pill">Colorado</span>
-  <span class="state-pill">Arizona</span>
-  <span class="state-pill">Florida</span>
-  <span class="state-pill">Texas</span>
-  <span class="state-pill">New Mexico</span>
-  <span class="state-pill">Georgia</span>
-  <span class="state-pill">California</span>
-  <span class="state-pill">Ohio</span>
-  <span class="state-pill">Wisconsin</span>
-  <span class="state-pill">Arkansas</span>
-  <span class="state-pill">Tennessee</span>
-  <span class="state-pill">South Carolina</span>
-  <span class="state-pill">Virginia</span>
+  <span id="statePills"></span>
 </div>
 
 <!-- WHAT'S INSIDE (SHORT) -->
@@ -143,5 +135,16 @@
   <p style="margin-top:10px;">Contact: <a href="mailto:hello@policyready.org">hello@policyready.org</a></p>
 </footer>
 
+<script src="/data.js"></script>
+<script>
+  (function () {
+    var el = document.getElementById('statePills');
+    if (el && typeof STATES !== 'undefined') {
+      el.innerHTML = STATES.map(function (s) {
+        return '<a class="state-pill" href="/state.html?id=' + s.id + '">' + s.name + '</a>';
+      }).join('');
+    }
+  })();
+</script>
 </body>
 </html>
