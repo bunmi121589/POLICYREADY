@@ -235,7 +235,7 @@ const STATES = [
         category: "How-To Guides",
         title: "How to Open a Brain Injury Residential Home in Colorado",
         file: "How_to_Open_a_Brain_Injury_Residential_Home_in_Colorado.pdf",
-        pages: 7,
+        pages: 13,
         citation: "Colorado \u00b7 2026",
         policies: "Complete step-by-step guide, single provider path",
         slug: "co-open-brain-injury-home",
