@@ -264,6 +264,10 @@ const PRODUCTS = {
   "or-referral-system": { title: "The Referral System \u2014 Oregon Edition", file: "The_Referral_System_Oregon_Edition.docx" },
   "or-sud": { title: "Oregon Outpatient Substance Use Disorder Treatment Policy & Procedure Manual", file: "OR_Outpatient_SUD_PP_Manual.docx" },
   "or-mh": { title: "Oregon Outpatient Community Mental Health Policy & Procedure Manual", file: "OR_Outpatient_MH_PP_Manual.docx" },
+  "nj-open-group-home": { title: "How to Open a Group Home in New Jersey", file: "How_to_Open_a_Group_Home_in_New_Jersey.pdf" },
+  "nj-group-home": { title: "New Jersey Community Residence (Group Home) Policy & Procedure Manual", file: "NJ_Group_Home_PP_Manual.docx" },
+  "nj-group-home-handbook": { title: "New Jersey Community Residence (Group Home) Direct Support Professional Handbook", file: "NJ_Group_Home_Caregiver_Handbook.docx" },
+  "nj-group-home-forms": { title: "New Jersey Community Residence (Group Home) Forms Packet", file: "NJ_Group_Home_Forms_Packet.docx" },
 };
 
 function getProduct(slug) {
