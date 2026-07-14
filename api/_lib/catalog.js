@@ -165,9 +165,11 @@ const PRODUCTS = {
   // ===== Brain Injury Residential line =====
   "co-brain-injury": { title: "Brain Injury Residential Policy & Procedure Manual (Colorado)", file: "CO_Brain_Injury_Residential_PP_Manual.docx" },
   "co-brain-injury-forms": { title: "Brain Injury Residential Forms Packet (Colorado)", file: "CO_Brain_Injury_Residential_Forms_Packet.docx" },
+  "co-brain-injury-referral": { title: "The Brain Injury Referral System (Colorado Edition)", file: "The_Brain_Injury_Referral_System_Colorado_Edition.docx" },
   "co-open-brain-injury-home": { title: "How to Open a Brain Injury Residential Home in Colorado", file: "How_to_Open_a_Brain_Injury_Residential_Home_in_Colorado.pdf" },
   "az-brain-injury": { title: "Brain Injury Assisted Living Policy & Procedure Manual (Arizona)", file: "AZ_Brain_Injury_Assisted_Living_PP_Manual.docx" },
   "az-brain-injury-forms": { title: "Brain Injury Assisted Living Forms Packet (Arizona)", file: "AZ_Brain_Injury_Assisted_Living_Forms_Packet.docx" },
+  "az-brain-injury-referral": { title: "The Brain Injury Referral System (Arizona Edition)", file: "The_Brain_Injury_Referral_System_Arizona_Edition.docx" },
   "az-open-brain-injury-home": { title: "How to Open an Assisted Living Home for Adults with Brain Injury in Arizona", file: "How_to_Open_an_Assisted_Living_Home_for_Brain_Injury_in_Arizona.pdf" },
   "tx-brain-injury": { title: "Brain Injury Assisted Living Policy & Procedure Manual (Texas)", file: "TX_Brain_Injury_Assisted_Living_PP_Manual.docx" },
   "tx-brain-injury-forms": { title: "Brain Injury Assisted Living Forms Packet (Texas)", file: "TX_Brain_Injury_Assisted_Living_Forms_Packet.docx" },
