@@ -173,6 +173,7 @@ const PRODUCTS = {
   "az-open-brain-injury-home": { title: "How to Open an Assisted Living Home for Adults with Brain Injury in Arizona", file: "How_to_Open_an_Assisted_Living_Home_for_Brain_Injury_in_Arizona.pdf" },
   "tx-brain-injury": { title: "Brain Injury Assisted Living Policy & Procedure Manual (Texas)", file: "TX_Brain_Injury_Assisted_Living_PP_Manual.docx" },
   "tx-brain-injury-forms": { title: "Brain Injury Assisted Living Forms Packet (Texas)", file: "TX_Brain_Injury_Assisted_Living_Forms_Packet.docx" },
+  "tx-brain-injury-referral": { title: "The Brain Injury Referral System (Texas Edition)", file: "The_Brain_Injury_Referral_System_Texas_Edition.docx" },
   "tx-home-care": { title: "Non-Medical Home Care (PAS) Policy & Procedure Manual (Texas)", file: "TX_Home_Care_PP_Manual.docx" },
   "tx-open-home-care": { title: "How to Open a Non-Medical Home Care Agency in Texas", file: "How_to_Open_a_Non-Medical_Home_Care_Agency_in_Texas.pdf" },
   "tx-home-care-handbook": { title: "Non-Medical Home Care Caregiver Handbook (Texas)", file: "TX_Home_Care_Caregiver_Handbook.docx" },
