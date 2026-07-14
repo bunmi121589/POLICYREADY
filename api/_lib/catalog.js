@@ -262,6 +262,8 @@ const PRODUCTS = {
   "or-home-care-handbook": { title: "Caregiver Handbook for an Oregon In-Home Care Agency", file: "OR_Home_Care_Caregiver_Handbook.docx" },
   "or-home-care-forms": { title: "Forms Packet for an Oregon In-Home Care Agency", file: "OR_Home_Care_Forms_Packet.docx" },
   "or-referral-system": { title: "The Referral System \u2014 Oregon Edition", file: "The_Referral_System_Oregon_Edition.docx" },
+  "or-sud": { title: "Oregon Outpatient Substance Use Disorder Treatment Policy & Procedure Manual", file: "OR_Outpatient_SUD_PP_Manual.docx" },
+  "or-mh": { title: "Oregon Outpatient Community Mental Health Policy & Procedure Manual", file: "OR_Outpatient_MH_PP_Manual.docx" },
 };
 
 function getProduct(slug) {
