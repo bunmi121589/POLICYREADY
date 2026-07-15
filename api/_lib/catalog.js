@@ -221,6 +221,7 @@ const PRODUCTS = {
   "fl-open-brain-injury-home": { title: "How to Open a Brain Injury Transitional Living Facility in Florida", file: "How_to_Open_a_Brain_Injury_Transitional_Living_Facility_in_Florida.pdf" },
   "ga-brain-injury": { title: "Brain Injury Personal Care Home Policy & Procedure Manual (Georgia)", file: "GA_Brain_Injury_PCH_PP_Manual.docx" },
   "ga-brain-injury-forms": { title: "Brain Injury Personal Care Home Forms Packet (Georgia)", file: "GA_Brain_Injury_PCH_Forms_Packet.docx" },
+  "ga-brain-injury-referral": { title: "The Brain Injury Referral System (Georgia Edition)", file: "The_Brain_Injury_Referral_System_Georgia_Edition.docx" },
   "ga-open-brain-injury-home": { title: "How to Open a Brain Injury Personal Care Home in Georgia", file: "How_to_Open_a_Brain_Injury_Personal_Care_Home_in_Georgia.pdf" },
   "oh-brain-injury": { title: "Brain Injury Residential Care Facility Policy & Procedure Manual (Ohio)", file: "OH_Brain_Injury_RCF_PP_Manual.docx" },
   "oh-brain-injury-forms": { title: "Brain Injury Residential Care Facility Forms Packet (Ohio)", file: "OH_Brain_Injury_RCF_Forms_Packet.docx" },
