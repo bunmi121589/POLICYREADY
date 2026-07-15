@@ -228,6 +228,7 @@ const PRODUCTS = {
   "oh-open-brain-injury-home": { title: "How to Open a Brain Injury Residential Care Facility in Ohio", file: "How_to_Open_a_Brain_Injury_Residential_Care_Facility_in_Ohio.pdf" },
   "ca-brain-injury": { title: "Brain Injury Adult Residential Facility Policy & Procedure Manual (California)", file: "CA_Brain_Injury_ARF_PP_Manual.docx" },
   "ca-brain-injury-forms": { title: "Brain Injury Adult Residential Facility Forms Packet (California)", file: "CA_Brain_Injury_ARF_Forms_Packet.docx" },
+  "ca-brain-injury-referral": { title: "The Brain Injury Referral System (California Edition)", file: "The_Brain_Injury_Referral_System_California_Edition.docx" },
   "ca-open-brain-injury-home": { title: "How to Open a Brain Injury Adult Residential Facility in California", file: "How_to_Open_a_Brain_Injury_Adult_Residential_Facility_in_California.pdf" },
   "ca-home-care": { title: "Non-Medical Home Care Policy & Procedure Manual (California)", file: "CA_Home_Care_PP_Manual.docx" },
   "ca-open-home-care": { title: "How to Open a Non-Medical Home Care Agency in California", file: "How_to_Open_a_Non-Medical_Home_Care_Agency_in_California.pdf" },
