@@ -62,6 +62,7 @@ const PRODUCTS = {
   "co-bhe-crisis-addon": { title: "Colorado BHE Emergency & Crisis Services Endorsement Add-On", file: "CO BHE Emergency & Crisis Services Endorsement Add-On.docx" },
   "az-bhrf": { title: "Arizona Behavioral Health Residential Facility (BHRF) Policy & Procedure Manual", file: "AZ Behavioral Health Residential Facility (BHRF) PP Manual.docx" },
   "az-otc": { title: "Arizona Outpatient Treatment Center (OTC) Policy & Procedure Manual", file: "AZ Outpatient Treatment Center (OTC) PP Manual.docx" },
+  "az-bh-referral": { title: "The Behavioral Health Referral System (Arizona Edition)", file: "The_Behavioral_Health_Referral_System_Arizona_Edition.docx" },
   "fl-sud": { title: "Florida Substance Abuse Services (DCF 65D-30) Policy & Procedure Manual", file: "FL Substance Abuse Services (DCF 65D-30) PP Manual.docx" },
   "tx-sud": { title: "Texas Chemical Dependency Treatment Facility (26 TAC 564) Policy & Procedure Manual", file: "TX Chemical Dependency Treatment Facility (26 TAC 564) PP Manual.docx" },
   "nm-bha": { title: "New Mexico Behavioral Health Agency (Substance Use & Mental Health) Policy & Procedure Manual", file: "NM Behavioral Health Agency (Substance Use & Mental Health) PP Manual.docx" },
