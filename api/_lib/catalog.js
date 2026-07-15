@@ -82,6 +82,8 @@ const PRODUCTS = {
 
   // ===== Mental Health (MH) line =====
   "fl-mh": { title: "Florida Mental Health Residential Treatment Facility (AHCA 65E-4.016) Policy & Procedure Manual", file: "FL Mental Health Residential Treatment Facility (AHCA 65E-4.016) PP Manual.docx" },
+  "fl-sud-referral": { title: "The Substance Use Referral System (Florida Edition)", file: "The_Substance_Use_Referral_System_Florida_Edition.docx" },
+  "fl-mh-referral": { title: "The Mental Health Referral System (Florida Edition)", file: "The_Mental_Health_Referral_System_Florida_Edition.docx" },
   "tx-mh": { title: "Texas Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) Policy & Procedure Manual", file: "TX Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) PP Manual.docx" },
   "ga-mh": { title: "Georgia Adult Residential Mental Health Program (111-8-2) Policy & Procedure Manual", file: "GA Adult Residential Mental Health Program (111-8-2) PP Manual.docx" },
   "wi-mh": { title: "Wisconsin Outpatient Mental Health Clinic (DHS 35) Policy & Procedure Manual", file: "WI Outpatient Mental Health Clinic (DHS 35) PP Manual.docx" },
