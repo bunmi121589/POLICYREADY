@@ -56,6 +56,7 @@ const PRODUCTS = {
 
   // ===== Behavioral Health \u2014 Substance Use (SUD) line =====
   "co-bhe": { title: "Colorado Behavioral Health Entity (BHE) Base Policy & Procedure Manual", file: "CO Behavioral Health Entity (BHE) Base PP Manual.docx" },
+  "co-bhe-referral": { title: "The Behavioral Health Referral System (Colorado Edition)", file: "The_Behavioral_Health_Referral_System_Colorado_Edition.docx" },
   "co-bhe-outpatient-addon": { title: "Colorado BHE Outpatient Endorsement Add-On", file: "CO BHE Outpatient Endorsement Add-On.docx" },
   "co-bhe-residential-addon": { title: "Colorado BHE Residential & Withdrawal Management Endorsement Add-On", file: "CO BHE Residential & Withdrawal Management Endorsement Add-On.docx" },
   "co-bhe-crisis-addon": { title: "Colorado BHE Emergency & Crisis Services Endorsement Add-On", file: "CO BHE Emergency & Crisis Services Endorsement Add-On.docx" },
