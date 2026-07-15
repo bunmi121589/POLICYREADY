@@ -85,6 +85,8 @@ const PRODUCTS = {
   "fl-sud-referral": { title: "The Substance Use Referral System (Florida Edition)", file: "The_Substance_Use_Referral_System_Florida_Edition.docx" },
   "fl-mh-referral": { title: "The Mental Health Referral System (Florida Edition)", file: "The_Mental_Health_Referral_System_Florida_Edition.docx" },
   "tx-mh": { title: "Texas Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) Policy & Procedure Manual", file: "TX Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) PP Manual.docx" },
+  "tx-sud-referral": { title: "The Substance Use Referral System (Texas Edition)", file: "The_Substance_Use_Referral_System_Texas_Edition.docx" },
+  "tx-mh-referral": { title: "The Mental Health Referral System (Texas Edition)", file: "The_Mental_Health_Referral_System_Texas_Edition.docx" },
   "ga-mh": { title: "Georgia Adult Residential Mental Health Program (111-8-2) Policy & Procedure Manual", file: "GA Adult Residential Mental Health Program (111-8-2) PP Manual.docx" },
   "wi-mh": { title: "Wisconsin Outpatient Mental Health Clinic (DHS 35) Policy & Procedure Manual", file: "WI Outpatient Mental Health Clinic (DHS 35) PP Manual.docx" },
   "ar-mh": { title: "Arkansas Behavioral Health Agency (Outpatient Behavioral Health Services) Policy & Procedure Manual", file: "AR Behavioral Health Agency (Outpatient Behavioral Health Services) PP Manual.docx" },
