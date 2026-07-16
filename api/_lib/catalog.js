@@ -89,10 +89,14 @@ const PRODUCTS = {
   "tx-sud-referral": { title: "The Substance Use Referral System (Texas Edition)", file: "The_Substance_Use_Referral_System_Texas_Edition.docx" },
   "tx-mh-referral": { title: "The Mental Health Referral System (Texas Edition)", file: "The_Mental_Health_Referral_System_Texas_Edition.docx" },
   "ga-mh": { title: "Georgia Adult Residential Mental Health Program (111-8-2) Policy & Procedure Manual", file: "GA Adult Residential Mental Health Program (111-8-2) PP Manual.docx" },
+  "ga-sud-referral": { title: "The Substance Use Referral System (Georgia Edition)", file: "The_Substance_Use_Referral_System_Georgia_Edition.docx" },
+  "ga-mh-referral": { title: "The Mental Health Referral System (Georgia Edition)", file: "The_Mental_Health_Referral_System_Georgia_Edition.docx" },
   "wi-mh": { title: "Wisconsin Outpatient Mental Health Clinic (DHS 35) Policy & Procedure Manual", file: "WI Outpatient Mental Health Clinic (DHS 35) PP Manual.docx" },
   "ar-mh": { title: "Arkansas Behavioral Health Agency (Outpatient Behavioral Health Services) Policy & Procedure Manual", file: "AR Behavioral Health Agency (Outpatient Behavioral Health Services) PP Manual.docx" },
   "tn-mh": { title: "Tennessee Mental Health Adult Residential Treatment Program (0940-05-17) Policy & Procedure Manual", file: "TN Mental Health Adult Residential Treatment Program (0940-05-17) PP Manual.docx" },
   "ca-mh": { title: "California Mental Health Rehabilitation Center (Title 9 Ch 3.5) Policy & Procedure Manual", file: "CA Mental Health Rehabilitation Center (Title 9 Ch 3.5) PP Manual.docx" },
+  "ca-sud-referral": { title: "The Substance Use Referral System (California Edition)", file: "The_Substance_Use_Referral_System_California_Edition.docx" },
+  "ca-mh-referral": { title: "The Mental Health Referral System (California Edition)", file: "The_Mental_Health_Referral_System_California_Edition.docx" },
   "sc-mh": { title: "South Carolina Residential Treatment Facility for Children & Adolescents (R.60-103) Policy & Procedure Manual", file: "SC Residential Treatment Facility for Children & Adolescents (R.60-103) PP Manual.docx" },
 
   // ===== Assisted Living / Residential Care line =====
