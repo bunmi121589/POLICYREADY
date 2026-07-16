@@ -66,6 +66,7 @@ const PRODUCTS = {
   "fl-sud": { title: "Florida Substance Abuse Services (DCF 65D-30) Policy & Procedure Manual", file: "FL Substance Abuse Services (DCF 65D-30) PP Manual.docx" },
   "tx-sud": { title: "Texas Chemical Dependency Treatment Facility (26 TAC 564) Policy & Procedure Manual", file: "TX Chemical Dependency Treatment Facility (26 TAC 564) PP Manual.docx" },
   "nm-bha": { title: "New Mexico Behavioral Health Agency (Substance Use & Mental Health) Policy & Procedure Manual", file: "NM Behavioral Health Agency (Substance Use & Mental Health) PP Manual.docx" },
+  "nm-bha-referral": { title: "The Behavioral Health Referral System (New Mexico Edition)", file: "The_Behavioral_Health_Referral_System_New_Mexico_Edition.docx" },
   "ga-sud": { title: "Georgia Drug Abuse Treatment & Education Program (111-8-19) Policy & Procedure Manual", file: "GA Drug Abuse Treatment & Education Program (111-8-19) PP Manual.docx" },
   "ca-sud": { title: "California Residential AOD Recovery or Treatment Facility (Title 9 Ch5) Policy & Procedure Manual", file: "CA Residential AOD Recovery or Treatment Facility (Title 9 Ch5) PP Manual.docx" },
   "oh-bh": { title: "Ohio Behavioral Health Provider (OhioMHAS) Policy & Procedure Manual", file: "OH Behavioral Health Provider (OhioMHAS) PP Manual.docx" },
