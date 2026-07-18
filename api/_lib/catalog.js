@@ -286,6 +286,16 @@ const PRODUCTS = {
   "nj-group-home": { title: "New Jersey Community Residence (Group Home) Policy & Procedure Manual", file: "NJ_Group_Home_PP_Manual.docx" },
   "nj-group-home-handbook": { title: "New Jersey Community Residence (Group Home) Direct Support Professional Handbook", file: "NJ_Group_Home_Caregiver_Handbook.docx" },
   "nj-group-home-forms": { title: "New Jersey Community Residence (Group Home) Forms Packet", file: "NJ_Group_Home_Forms_Packet.docx" },
+  // ===== Assisted Living \u2014 North Carolina, New York, New Jersey =====
+  "nc-adult-care-home": { title: "Adult Care Home Policy & Procedure Manual (North Carolina)", file: "Adult_Care_Home_Policy_Manual_North_Carolina.docx" },
+  "nc-open-adult-care-home": { title: "How to Open an Adult Care Home in North Carolina", file: "How_to_Open_an_Adult_Care_Home_in_North_Carolina.pdf" },
+  "nc-adult-care-home-forms": { title: "Adult Care Home Forms Packet (North Carolina)", file: "Adult_Care_Home_Forms_Packet_North_Carolina.docx" },
+  "ny-adult-care-facility": { title: "Adult Care Facility & Assisted Living Residence Policy & Procedure Manual (New York)", file: "Adult_Care_Facility_ALR_Policy_Manual_New_York.docx" },
+  "ny-open-adult-care-facility": { title: "How to Open an Adult Care Facility in New York", file: "How_to_Open_an_Adult_Care_Facility_in_New_York.pdf" },
+  "ny-adult-care-facility-forms": { title: "Adult Care Facility & Assisted Living Residence Forms Packet (New York)", file: "Adult_Care_Facility_Forms_Packet_New_York.docx" },
+  "nj-assisted-living": { title: "Assisted Living Residence & Comprehensive Personal Care Home Policy & Procedure Manual (New Jersey)", file: "Assisted_Living_CPCH_Policy_Manual_New_Jersey.docx" },
+  "nj-open-assisted-living": { title: "How to Open an Assisted Living Residence in New Jersey", file: "How_to_Open_an_Assisted_Living_Residence_in_New_Jersey.pdf" },
+  "nj-assisted-living-forms": { title: "Assisted Living Residence & Comprehensive Personal Care Home Forms Packet (New Jersey)", file: "Assisted_Living_CPCH_Forms_Packet_New_Jersey.docx" },
 };
 
 function getProduct(slug) {
