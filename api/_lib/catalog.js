@@ -88,6 +88,7 @@ const PRODUCTS = {
   "tx-mh": { title: "Texas Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) Policy & Procedure Manual", file: "TX Private Psychiatric Hospital & Crisis Stabilization Unit (26 TAC 510) PP Manual.docx" },
   "tx-sud-referral": { title: "The Substance Use Referral System (Texas Edition)", file: "The_Substance_Use_Referral_System_Texas_Edition.docx" },
   "tx-mh-referral": { title: "The Mental Health Referral System (Texas Edition)", file: "The_Mental_Health_Referral_System_Texas_Edition.docx" },
+  "tx-mh-lmha": { title: "Community Mental Health Services (LMHA \u2014 26 TAC 301 & 306) Policy & Procedure Manual", file: "TX Community Mental Health (LMHA - 26 TAC 301 & 306) PP Manual.docx" },
   "ga-mh": { title: "Georgia Adult Residential Mental Health Program (111-8-2) Policy & Procedure Manual", file: "GA Adult Residential Mental Health Program (111-8-2) PP Manual.docx" },
   "ga-sud-referral": { title: "The Substance Use Referral System (Georgia Edition)", file: "The_Substance_Use_Referral_System_Georgia_Edition.docx" },
   "ga-mh-referral": { title: "The Mental Health Referral System (Georgia Edition)", file: "The_Mental_Health_Referral_System_Georgia_Edition.docx" },
