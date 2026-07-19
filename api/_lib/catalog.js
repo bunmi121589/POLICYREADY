@@ -286,6 +286,11 @@ const PRODUCTS = {
   "nj-group-home": { title: "New Jersey Community Residence (Group Home) Policy & Procedure Manual", file: "NJ_Group_Home_PP_Manual.docx" },
   "nj-group-home-handbook": { title: "New Jersey Community Residence (Group Home) Direct Support Professional Handbook", file: "NJ_Group_Home_Caregiver_Handbook.docx" },
   "nj-group-home-forms": { title: "New Jersey Community Residence (Group Home) Forms Packet", file: "NJ_Group_Home_Forms_Packet.docx" },
+  // ===== Home Care \u2014 New Jersey (Health Care Service Firm) =====
+  "nj-home-care": { title: "Home Care Policy & Procedure Manual (New Jersey)", file: "NJ_Home_Care_HCSF_PP_Manual.docx" },
+  "nj-open-home-care": { title: "How to Open a Home Care Agency in New Jersey", file: "How_to_Open_a_Home_Care_Agency_in_New_Jersey.pdf" },
+  "nj-home-care-handbook": { title: "Home Health Aide Caregiver Handbook (New Jersey)", file: "Home_Health_Aide_Caregiver_Handbook_New_Jersey.docx" },
+  "nj-home-care-forms": { title: "Home Care Agency Forms Packet (New Jersey)", file: "Home_Care_Agency_Forms_Packet_New_Jersey.docx" },
   // ===== Assisted Living \u2014 North Carolina, New York, New Jersey =====
   "nc-adult-care-home": { title: "Adult Care Home Policy & Procedure Manual (North Carolina)", file: "Adult_Care_Home_Policy_Manual_North_Carolina.docx" },
   "nc-open-adult-care-home": { title: "How to Open an Adult Care Home in North Carolina", file: "How_to_Open_an_Adult_Care_Home_in_North_Carolina.pdf" },
