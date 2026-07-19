@@ -286,6 +286,11 @@ const PRODUCTS = {
   "nj-group-home": { title: "New Jersey Community Residence (Group Home) Policy & Procedure Manual", file: "NJ_Group_Home_PP_Manual.docx" },
   "nj-group-home-handbook": { title: "New Jersey Community Residence (Group Home) Direct Support Professional Handbook", file: "NJ_Group_Home_Caregiver_Handbook.docx" },
   "nj-group-home-forms": { title: "New Jersey Community Residence (Group Home) Forms Packet", file: "NJ_Group_Home_Forms_Packet.docx" },
+  // ===== Behavioral Health \u2014 New York =====
+  "ny-sud": { title: "Substance Use Disorder Services Policy & Procedure Manual (New York)", file: "NY_SUD_PP_Manual.docx" },
+  "ny-mh": { title: "Mental Health Services Policy & Procedure Manual (New York)", file: "NY_MH_PP_Manual.docx" },
+  "ny-sud-referral": { title: "The Substance Use Referral System (New York Edition)", file: "The_Substance_Use_Referral_System_New_York_Edition.docx" },
+  "ny-mh-referral": { title: "The Mental Health Referral System (New York Edition)", file: "The_Mental_Health_Referral_System_New_York_Edition.docx" },
   // ===== Behavioral Health \u2014 North Carolina =====
   "nc-sud": { title: "Substance Use Disorder Services Policy & Procedure Manual (North Carolina)", file: "NC_SUD_PP_Manual.docx" },
   "nc-mh": { title: "Mental Health Services Policy & Procedure Manual (North Carolina)", file: "NC_MH_PP_Manual.docx" },
