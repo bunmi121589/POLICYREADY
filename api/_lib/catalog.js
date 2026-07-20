@@ -302,6 +302,10 @@ const PRODUCTS = {
   "nj-open-home-care": { title: "How to Open a Home Care Agency in New Jersey", file: "How_to_Open_a_Home_Care_Agency_in_New_Jersey.pdf" },
   "nj-home-care-handbook": { title: "Home Health Aide Caregiver Handbook (New Jersey)", file: "Home_Health_Aide_Caregiver_Handbook_New_Jersey.docx" },
   "nj-home-care-forms": { title: "Home Care Agency Forms Packet (New Jersey)", file: "Home_Care_Agency_Forms_Packet_New_Jersey.docx" },
+  "nj-sud": { title: "Substance Use Disorder Services Policy & Procedure Manual", file: "NJ_SUD_PP_Manual.docx" },
+  "nj-mh": { title: "Mental Health Services Policy & Procedure Manual", file: "NJ_MH_PP_Manual.docx" },
+  "nj-sud-referral": { title: "The Substance Use Referral System \u2014 New Jersey Edition", file: "The_Substance_Use_Referral_System_New_Jersey_Edition.docx" },
+  "nj-mh-referral": { title: "The Mental Health Referral System \u2014 New Jersey Edition", file: "The_Mental_Health_Referral_System_New_Jersey_Edition.docx" },
   // ===== Assisted Living \u2014 North Carolina, New York, New Jersey =====
   "nc-adult-care-home": { title: "Adult Care Home Policy & Procedure Manual (North Carolina)", file: "Adult_Care_Home_Policy_Manual_North_Carolina.docx" },
   "nc-open-adult-care-home": { title: "How to Open an Adult Care Home in North Carolina", file: "How_to_Open_an_Adult_Care_Home_in_North_Carolina.pdf" },
