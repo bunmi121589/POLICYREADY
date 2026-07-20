@@ -80,6 +80,7 @@ const PRODUCTS = {
   "tn-sud": { title: "Tennessee Alcohol & Drug Treatment Facility (TDMHSAS 0940-05) Policy & Procedure Manual", file: "TN Alcohol & Drug Treatment Facility (TDMHSAS 0940-05) PP Manual.docx" },
   "sc-sud": { title: "South Carolina Facility Treating Psychoactive Substance Abuse or Dependence (R.61-93) Policy & Procedure Manual", file: "SC Facility Treating Psychoactive Substance Abuse or Dependence (R.61-93) PP Manual.docx" },
   "va-sud": { title: "Virginia Substance Use Disorder Provider (DBHDS 12VAC35-105) Policy & Procedure Manual", file: "VA Substance Use Disorder Provider (DBHDS 12VAC35-105) PP Manual.docx" },
+  "va-mh": { title: "Mental Health Services (DBHDS 12VAC35-105) Policy & Procedure Manual", file: "VA Mental Health Services (DBHDS 12VAC35-105) PP Manual.docx" },
 
   // ===== Mental Health (MH) line =====
   "fl-mh": { title: "Florida Mental Health Residential Treatment Facility (AHCA 65E-4.016) Policy & Procedure Manual", file: "FL Mental Health Residential Treatment Facility (AHCA 65E-4.016) PP Manual.docx" },
