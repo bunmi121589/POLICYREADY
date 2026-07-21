@@ -207,6 +207,8 @@ const PRODUCTS = {
   "co-home-care-handbook": { title: "Home Care Caregiver Handbook (Colorado)", file: "CO_Home_Care_Caregiver_Handbook.docx" },
   "co-home-care-forms": { title: "Class B Home Care Agency Forms Packet (Colorado)", file: "CO_Home_Care_Forms_Packet.docx" },
   "co-referral-system": { title: "The Referral System (Colorado Edition)", file: "The_Referral_System_Colorado_Edition.docx" },
+  "co-sud": { title: "Substance Use Disorder Services (2 CCR 502-1) Policy & Procedure Manual", file: "CO Substance Use Disorder Services (2 CCR 502-1) PP Manual.docx" },
+  "co-mh": { title: "Mental Health Services (2 CCR 502-1) Policy & Procedure Manual", file: "CO Mental Health Services (2 CCR 502-1) PP Manual.docx" },
   "nm-home-care": { title: "New Mexico Home Health Agency Policy & Procedure Manual", file: "NM_Home_Health_Agency_PP_Manual.docx" },
   "nm-open-home-care": { title: "How to Open a Home Health Agency in New Mexico", file: "How_to_Open_a_Home_Health_Agency_in_New_Mexico.pdf" },
   "nm-home-care-handbook": { title: "Home Health Caregiver Handbook (New Mexico)", file: "NM_Home_Health_Caregiver_Handbook.docx" },
