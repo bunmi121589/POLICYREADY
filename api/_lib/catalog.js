@@ -211,6 +211,7 @@ const PRODUCTS = {
   "co-sud": { title: "Substance Use Disorder Services (2 CCR 502-1) Policy & Procedure Manual", file: "CO Substance Use Disorder Services (2 CCR 502-1) PP Manual.docx" },
   "co-mh": { title: "Mental Health Services (2 CCR 502-1) Policy & Procedure Manual", file: "CO Mental Health Services (2 CCR 502-1) PP Manual.docx" },
   "co-recovery-residence": { title: "Recovery Residence Operations Policy & Procedure Manual", file: "CO Recovery Residence Operations Manual.docx" },
+  "nm-recovery-residence": { title: "Recovery Residence Operations Policy & Procedure Manual (New Mexico)", file: "NM Recovery Residence Operations Manual.docx" },
   "nm-home-care": { title: "New Mexico Home Health Agency Policy & Procedure Manual", file: "NM_Home_Health_Agency_PP_Manual.docx" },
   "nm-open-home-care": { title: "How to Open a Home Health Agency in New Mexico", file: "How_to_Open_a_Home_Health_Agency_in_New_Mexico.pdf" },
   "nm-home-care-handbook": { title: "Home Health Caregiver Handbook (New Mexico)", file: "NM_Home_Health_Caregiver_Handbook.docx" },
