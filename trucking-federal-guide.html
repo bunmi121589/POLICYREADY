@@ -47,6 +47,7 @@
     }
     .parts li:last-child{ border-bottom:0; }
     .parts li b{ color:var(--ink); font-weight:600; }
+    .parts li.etc{ color:var(--ink-lt); font-style:italic; }
     .buy-btn{
       display:block; width:100%; text-align:center; background:var(--amber);
       color:#fff; border:none; padding:16px; border-radius:6px;
@@ -107,20 +108,13 @@
       <p class="price-note">One-time purchase. Instant download. Yours to keep.</p>
 
       <ul class="parts">
-        <li><b>Decide what you're operating.</b> GVWR, GCWR, CDL classes, and the two thresholds that determine everything after this.</li>
-        <li><b>Entity and EIN.</b> Structure, naming, registered agent, filing, and the order that keeps you from doing it twice.</li>
-        <li><b>USDOT number and operating authority.</b> The new FMCSA registration system, identity verification, and the cold-call fraud that follows.</li>
-        <li><b>BOC-3 process agents.</b> Why you can't file it yourself and what the blanket designation actually covers.</li>
-        <li><b>Insurance.</b> The federal minimums, what MCS-90 really does, and the cargo coverage myth.</li>
-        <li><b>UCR, IRP and IFTA.</b> Verified fee brackets, which states participate, and the axle-count rule that catches hotshots.</li>
-        <li><b>Form 2290 and the heavy vehicle tax.</b> Who's exempt, the first-use deadline, and the Schedule 1 timing trap.</li>
-        <li><b>Drug and alcohol testing.</b> Consortiums, the Clearinghouse, and the liability that doesn't transfer.</li>
-        <li><b>Driver qualification files.</b> What an auditor asks for first, including the file you keep on yourself.</li>
-        <li><b>Hours of service and ELDs.</b> The clocks, the exemptions, and the records you have to be able to produce.</li>
-        <li><b>Vehicle maintenance and inspection records.</b> DVIRs, the maintenance file, and what a roadside stop pulls up.</li>
-        <li><b>Getting loads and getting paid.</b> Brokers, rate confirmations, factoring, and the paperwork that protects you.</li>
-        <li><b>Adding your first driver.</b> What changes the moment someone else is behind the wheel.</li>
-        <li><b>The New Entrant Safety Audit.</b> The 18-month window and the violations that fail you automatically.</li>
+        <li><b>Decide what you're operating</b></li>
+        <li><b>USDOT number and operating authority</b></li>
+        <li><b>Insurance</b></li>
+        <li><b>Drug and alcohol testing</b></li>
+        <li><b>Hours of service and ELDs</b></li>
+        <li><b>The New Entrant Safety Audit</b></li>
+        <li class="etc">and more</li>
       </ul>
 
       <button class="buy-btn" id="buyBtn" data-slug="us-open-trucking-business">Buy Now &mdash; $200</button>
