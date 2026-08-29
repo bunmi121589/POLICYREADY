@@ -66,6 +66,23 @@
     .honest h4{ margin:0 0 10px; color:var(--green); font-size:1.05rem; }
     .honest p{ margin:0 0 10px; font-size:.93rem; color:var(--ink-mid); line-height:1.65; }
     .honest p:last-child{ margin-bottom:0; }
+    .stats{
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:18px; max-width:900px; margin:0 auto 22px;
+    }
+    .stat{
+      background:var(--white); border:1px solid var(--border);
+      border-top:3px solid #15181C; border-radius:8px; padding:20px 18px; text-align:center;
+    }
+    .stat-n{
+      font-family:'Playfair Display',serif; font-size:2rem; font-weight:700;
+      color:#15181C; line-height:1.1; margin-bottom:8px;
+    }
+    .stat-l{ font-size:.88rem; color:var(--ink-mid); line-height:1.5; }
+    .stat-src{
+      max-width:900px; margin:0 auto; font-size:.78rem; color:var(--ink-lt);
+      line-height:1.6; text-align:center;
+    }
   </style>
 </head>
 <body>
@@ -124,9 +141,46 @@
     <div class="honest">
       <h4>What this is, plainly</h4>
       <p>This is a guide, not a filing service and not legal advice. It explains what each federal requirement is, why it exists, what it costs, and exactly who to contact &mdash; so you can do it yourself instead of paying someone a percentage to do it for you.</p>
-      <p>Where a government form already exists, we tell you where to get it rather than selling you a copy of it. Where a dollar figure or phone number appears, it came from an official source, and we tell you to confirm anything that can change before you rely on it.</p>
-      <p>It does not cover your state's own registration and tax rules. Those come next, as short add-ons built on top of this.</p>
     </div>
+  </div>
+</section>
+
+
+<!-- THE NUMBERS -->
+<section class="who-section">
+  <div class="container">
+    <div class="section-label">The industry you're entering</div>
+    <h2>It is built out of small operators</h2>
+    <p class="section-sub">Not a handful of giants. Hundreds of thousands of small businesses, most of them running a few trucks or one.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-n">91.5%</div>
+        <div class="stat-l">of U.S. motor carriers operate ten trucks or fewer</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">~580,000</div>
+        <div class="stat-l">active motor carriers registered with FMCSA</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">$58,640</div>
+        <div class="stat-l">median annual pay for heavy and tractor-trailer drivers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">$79,380</div>
+        <div class="stat-l">what the top ten percent of drivers earn above</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">2.2M</div>
+        <div class="stat-l">driving jobs in the U.S., growing through 2035</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">214,500</div>
+        <div class="stat-l">openings projected every year over the decade</div>
+      </div>
+    </div>
+
+    <p class="stat-src">Pay, employment, and growth figures: U.S. Bureau of Labor Statistics, Occupational Outlook Handbook, heavy and tractor-trailer truck drivers (May 2025 wage data). Carrier counts: FMCSA carrier census via American Trucking Associations, American Trucking Trends 2025. Figures change &mdash; verify current data before you rely on it.</p>
   </div>
 </section>
 
