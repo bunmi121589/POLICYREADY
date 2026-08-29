@@ -768,3 +768,12 @@ footer a:hover { color: white; }
   .shop-grid, .state-manuals-grid, .manual-body-wrap { padding-left: 20px; padding-right: 20px; }
   .buy-sidebar { position: static; }
 }
+
+
+/* ── VERTICAL NAV BUTTONS (added for hub structure) ── */
+.nav-btn-truck {
+  background: #15181C;
+  color: #F2A413;
+  border: 1px solid #3D444E;
+}
+.nav-btn-truck:hover { background: #000000; color: #F2A413; }
