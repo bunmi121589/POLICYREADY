@@ -260,6 +260,9 @@ const PRODUCTS = {
   "ca-home-care-forms": { title: "Non-Medical Home Care Forms Packet (California)", file: "CA_Home_Care_Forms_Packet.docx" },
   "ca-referral-system": { title: "The Referral System (California Edition)", file: "The_Referral_System_California_Edition.docx" },
 
+  // ===== Trucking =====
+  "us-open-trucking-business": { title: "How to Start a Trucking Business \u2014 The Federal Setup Guide", file: "How_to_Start_a_Trucking_Business_Federal_Setup_Guide.pdf" },
+
   // ===== How-To / Business Startup Guides =====
   "co-open-host-home": { title: "How to Open a Host Home Business in Colorado", file: "How_to_Open_a_Host_Home_Business_in_Colorado.pdf" },
   "az-open-dev-home": { title: "How to Open a Developmental Home Business in Arizona", file: "How_to_Open_a_Developmental_Home_Business_in_Arizona.pdf" },
