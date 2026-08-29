@@ -3,33 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PolicyReady.org — Health Care Policy & Procedure Manuals</title>
-  <meta name="description" content="Policy & Procedure Manuals built to actual regulations, agencies, and background check systems specific to your state. Download in minutes.">
+  <title>PolicyReady.org — Straight Answers for First-Time Business Owners</title>
+  <meta name="description" content="Compliance manuals and startup guides built from the actual rules — for people opening their first business. Healthcare and trucking.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <style>
-    .states-strip a.state-pill{ text-decoration:none; cursor:pointer; transition:filter .15s ease; }
-    .states-strip a.state-pill:hover{ filter:brightness(0.94); text-decoration:underline; }
+    .doors{ display:grid; grid-template-columns:1fr; gap:22px; max-width:1000px; margin:0 auto; }
+    @media(min-width:800px){ .doors{ grid-template-columns:1fr 1fr; } }
+    .door{
+      display:block; text-decoration:none; background:var(--white);
+      border:1px solid var(--border); border-top:4px solid var(--green);
+      border-radius:10px; padding:32px 28px 28px; transition:transform .15s, box-shadow .15s;
+    }
+    .door:hover{ transform:translateY(-3px); box-shadow:0 10px 28px rgba(22,28,24,0.10); }
+    .door.truck{ border-top-color:#15181C; }
+    .door-tag{
+      display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--amber); margin-bottom:12px;
+    }
+    .door h3{
+      font-family:'Playfair Display',serif; font-size:1.75rem; color:var(--green);
+      margin:0 0 10px; line-height:1.15;
+    }
+    .door.truck h3{ color:#15181C; }
+    .door p{ color:var(--ink-mid); font-size:.98rem; margin:0 0 18px; line-height:1.6; }
+    .door ul{ list-style:none; padding:0; margin:0 0 20px; }
+    .door ul li{
+      font-size:.9rem; color:var(--ink-mid); padding:7px 0 7px 20px;
+      position:relative; border-bottom:1px solid var(--border);
+    }
+    .door ul li:last-child{ border-bottom:0; }
+    .door ul li::before{
+      content:""; position:absolute; left:0; top:15px; width:9px; height:2px; background:var(--amber);
+    }
+    .door-go{ font-weight:600; font-size:.95rem; color:var(--green); }
+    .door.truck .door-go{ color:#15181C; }
+    .mission-section{ background:var(--white); }
+    .mission-box{
+      max-width:820px; margin:0 auto; text-align:center;
+    }
+    .mission-box blockquote{
+      font-family:'Playfair Display',serif; font-size:1.5rem; line-height:1.4;
+      color:var(--green); margin:0 0 20px; font-weight:600;
+    }
+    .mission-box p{ color:var(--ink-mid); font-size:1rem; line-height:1.7; margin:0 0 14px; }
   </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2133964780833412');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2133964780833412&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code --></head>
+</head>
 <body>
 
 <nav>
@@ -38,106 +59,107 @@ src="https://www.facebook.com/tr?id=2133964780833412&ev=PageView&noscript=1"
     <a href="/how-it-works.html">How It Works</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
-    <a href="/training.html" class="nav-btn nav-btn-train">Browse Training</a>
-    <a href="/shop.html" class="nav-btn">Browse Manuals</a>
+    <a href="/healthcare.html" class="nav-btn">Healthcare</a>
+    <a href="/trucking.html" class="nav-btn nav-btn-truck">Trucking</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">Health Care Policy & Procedure Manuals</div>
-  <h1>Your policy manual should know your state — not just have your state's name on it.</h1>
-  <p>Policy & Procedure Manuals built to actual regulations, agencies, and background check systems specific to your state. Download in minutes.</p>
+  <div class="hero-eyebrow">Compliance Manuals & Startup Guides</div>
+  <h1>The information you need to start shouldn't be the thing standing in your way.</h1>
+  <p>Every industry has people who make a living keeping the rules confusing. We write them out plainly — the actual regulations, the real agencies, the phone numbers, and what each step is actually for.</p>
   <div class="hero-actions">
-    <a href="/shop.html" class="btn-primary">Browse All Manuals</a>
-    <a href="/how-it-works.html" class="btn-ghost">How It Works</a>
+    <a href="/healthcare.html" class="btn-primary">Healthcare</a>
+    <a href="/trucking.html" class="btn-ghost">Trucking</a>
   </div>
 </section>
 
-<!-- STATES STRIP -->
-<div class="states-strip">
-  <span>Available now:</span>
-  <span id="statePills"></span>
-</div>
-
-<!-- WHAT'S INSIDE (SHORT) -->
+<!-- TWO DOORS -->
 <section class="inside-section">
   <div class="container">
-    <div class="section-label">What you get</div>
-    <h2>A complete manual, not a skeleton</h2>
-    <p class="section-sub">Covering rights, personnel, care services, medication management, emergency preparedness, and quality management — ready to customize; just add your organization's details and adapt to your operations.</p>
+    <div class="section-label">Choose your industry</div>
+    <h2>Where are you starting?</h2>
+    <p class="section-sub">Each section is built on that industry's real rules — never a template borrowed from somewhere else.</p>
+
+    <div class="doors">
+
+      <a class="door" href="/healthcare.html">
+        <span class="door-tag">Established · 13 states</span>
+        <h3>Healthcare</h3>
+        <p>Policy &amp; procedure manuals, forms packets, and startup guides for licensed care settings — written to your specific state's regulations.</p>
+        <ul>
+          <li>Host homes and group homes</li>
+          <li>Assisted living and brain injury residential</li>
+          <li>Behavioral health and recovery residences</li>
+          <li>State-specific citations, agencies, and background check systems</li>
+        </ul>
+        <span class="door-go">Browse healthcare →</span>
+      </a>
+
+      <a class="door truck" href="/trucking.html">
+        <span class="door-tag">New</span>
+        <h3>Trucking</h3>
+        <p>How to actually start a small trucking business — the federal setup, start to finish, written for someone doing it for the first time.</p>
+        <ul>
+          <li>Entity, EIN, USDOT number and operating authority</li>
+          <li>Insurance minimums, BOC-3, UCR, IRP and IFTA</li>
+          <li>Drug and alcohol testing and the Clearinghouse</li>
+          <li>Driver files, hours of service, and the new entrant audit</li>
+        </ul>
+        <span class="door-go">Browse trucking →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="who-section mission-section">
+  <div class="container">
+    <div class="section-label">Why this exists</div>
+    <div class="mission-box">
+      <blockquote>We can all make it in this United States.</blockquote>
+      <p>Most people who want to start a business aren't stopped by the work. They're stopped by not being able to find out what the work actually is. The answers exist, but they're buried in regulation, or held by someone who wants a percentage of your business before they'll explain them.</p>
+      <p>PolicyReady is built for the person working a nine-to-five who wants to start something of their own, and who just needs somebody to lay it out honestly — what to do first, who to call, what it costs, and what each step is actually for.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S THE SAME EVERYWHERE -->
+<section class="inside-section">
+  <div class="container">
+    <div class="section-label">What every product has in common</div>
+    <h2>Built from the actual rules</h2>
     <div class="inside-grid">
       <div class="inside-card">
-        <div class="inside-icon">📍</div>
-        <h3>Your state's actual citations</h3>
-        <p>Real regulatory code numbers, real agency names, real hotline numbers — for your specific state and setting type.</p>
+        <div class="inside-icon">📋</div>
+        <h3>Real citations, not paraphrase</h3>
+        <p>Every requirement traces back to a regulation you can look up yourself. We tell you where it came from.</p>
       </div>
       <div class="inside-card">
-        <div class="inside-icon">📄</div>
-        <h3>Editable Word document</h3>
-        <p>Delivered as a .docx file. Open in Microsoft Word, fill in your bracketed fields, save, and it's yours.</p>
+        <div class="inside-icon">☎️</div>
+        <h3>Real names and numbers</h3>
+        <p>Agencies, phone numbers, addresses, and websites — verified, with a note telling you to confirm anything that can change.</p>
       </div>
       <div class="inside-card">
-        <div class="inside-icon">✅</div>
-        <h3>Matched to your license type</h3>
-        <p>Whether you're opening a host home, a behavioral health program, or another licensed setting, the manual fits your state and your role.</p>
+        <div class="inside-icon">⬇️</div>
+        <h3>One-time purchase</h3>
+        <p>Pay once, download immediately, keep it. No subscription and no percentage of your business.</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="/how-it-works.html" class="btn-ghost-dark">See everything that's inside →</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHO IT'S FOR -->
-<section class="who-section">
-  <div class="container">
-    <div class="section-label">Who this is for</div>
-    <h2>Built for people doing this the right way</h2>
-    <p class="section-sub">If you're opening a healthcare business to help people who need it — and you need your paperwork to be right, this was made for you.</p>
-    <div class="who-grid">
-      <div class="who-card">
-        <h3>Individuals opening their own home</h3>
-        <p>You're becoming a provider and need a full P&P manual for your state before you can be approved. Start with the manual that matches your setting.</p>
-      </div>
-      <div class="who-card">
-        <h3>Small agencies launching a program</h3>
-        <p>You're starting or growing a program and need agency-level policies for your supervisors, staff, and contracted home providers.</p>
-      </div>
-      <div class="who-card">
-        <h3>Existing providers updating their policies</h3>
-        <p>Your current manual is outdated or doesn't match your state's current regulations. Get a current, professional baseline.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VALUE BOX -->
-<section class="value-section">
-  <div class="value-box">
-    <div class="value-list-title">What's included</div>
-    <ul class="price-list">
-      <li>State-specific throughout</li>
-      <li>Editable Microsoft Word format</li>
-      <li>Built to your state's regulations and license type</li>
-      <li>Professionally structured framework</li>
-      <li>Yours to keep and reuse</li>
-    </ul>
-    <div class="value-tags">
-      <span>One-time purchase</span>
-      <span>·</span>
-      <span>Instant download</span>
-    </div>
-    <a href="/shop.html" class="btn-primary" style="display:inline-block; width:100%; text-align:center; font-size:1.05rem; padding:15px; margin-top:8px;">Browse All Manuals</a>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="cta-section">
   <div class="section-label">Get started</div>
-  <h2>Find your state and get your manual today</h2>
-  <p>Pick your state, choose your manual, pay once, and download immediately — ready to customize and make your own.</p>
-  <a href="/shop.html" class="btn-primary" style="font-size:1.05rem; padding:15px 36px;">Browse All Manuals</a>
+  <h2>Pick your industry and see what's inside</h2>
+  <p>Both sections are built the same way — the real rules, explained plainly, ready to download.</p>
+  <div class="hero-actions" style="margin-top:22px;">
+    <a href="/healthcare.html" class="btn-primary" style="font-size:1.05rem; padding:15px 36px;">Healthcare</a>
+    <a href="/trucking.html" class="btn-primary" style="font-size:1.05rem; padding:15px 36px;">Trucking</a>
+  </div>
 </section>
 
 <footer>
@@ -145,22 +167,12 @@ src="https://www.facebook.com/tr?id=2133964780833412&ev=PageView&noscript=1"
     <a href="/">PolicyReady.org</a> &nbsp;·&nbsp;
     <a href="/how-it-works.html">How It Works</a> &nbsp;·&nbsp;
     <a href="/about.html">About</a> &nbsp;·&nbsp;
-    <a href="/shop.html">Browse Manuals</a>
+    <a href="/healthcare.html">Healthcare</a> &nbsp;·&nbsp;
+    <a href="/trucking.html">Trucking</a>
   </p>
-  <p>These templates are professional starting-point documents and do not constitute legal advice. Verify current regulatory requirements with your state agency or a qualified compliance consultant before submitting.</p>
+  <p>These are professional starting-point documents and educational guides. They do not constitute legal, tax, or compliance advice. Verify current requirements with the relevant agency or a qualified professional before you rely on them.</p>
   <p style="margin-top:10px;">Contact: <a href="mailto:hello@policyready.org">hello@policyready.org</a></p>
 </footer>
 
-<script src="/data.js"></script>
-<script>
-  (function () {
-    var el = document.getElementById('statePills');
-    if (el && typeof STATES !== 'undefined') {
-      el.innerHTML = STATES.map(function (s) {
-        return '<a class="state-pill" href="/state.html?id=' + s.id + '">' + s.name + '</a>';
-      }).join('');
-    }
-  })();
-</script>
 </body>
 </html>
