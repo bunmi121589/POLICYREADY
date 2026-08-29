@@ -5271,6 +5271,15 @@ const STATES = [
         policies: "5 parts, 22 sections",
         summary: "A ready-to-customize caregiver handbook for a licensed Oregon In-Home Care Agency \u2014 the role, client rights, safe care, and professional conduct your caregivers need in writing, built to Oregon\u2019s licensed model.",
         details: "A professionally structured caregiver handbook written for Oregon\u2019s licensed in-home care model. Five parts move from the caregiver\u2019s role and the people they serve, into providing great personal and household care, staying safe and healthy, protecting the people in their care, and being a professional. It is Oregon-specific throughout: licensed by the Oregon Health Authority, medication help tied to the agency\u2019s license class, abuse reporting to the Oregon SAFEline with mandatory-reporter duties under ORS 124, and Oregon\u2019s regional minimum wage. Ready to customize \u2014 add your agency name and details and adapt it to your operations. General information, not legal advice.",
+        bullets: [
+          "Written to Oregon\u2019s licensed in-home care model \u2014 OHA licensed, not a generic handbook",
+          "Five parts: the caregiver\u2019s role, the people they serve, great care, staying safe, being a professional",
+          "Medication help scoped to your agency\u2019s license class, so caregivers know their limits",
+          "Abuse reporting to the Oregon SAFEline with mandatory-reporter duties under ORS 124",
+          "Oregon\u2019s regional minimum wage, pay, and scheduling expectations spelled out",
+          "Client rights, dignity, confidentiality, and professional conduct in writing",
+          "Ready to customize \u2014 add your agency name and details and adapt it to your operations",
+        ],
       },
       {
         id: "or-home-care-forms",
@@ -5285,6 +5294,16 @@ const STATES = [
         policies: "50 ready-to-use forms across 6 sections",
         summary: "The companion forms packet to the Oregon In-Home Care Agency manual \u2014 fifty ready-to-use, editable forms covering licensing and administration, client intake and rights, caregiver screening and training, service delivery, health and safety, and records and compliance.",
         details: "A complete set of editable forms built to Oregon\u2019s licensed in-home care model under OAR Chapter 333, Division 536. Six sections provide the day-to-day records an agency and an OHA surveyor expect: business and license-class records and administrator qualification; client rights, service agreement, assessment, and service plan; caregiver background-check and caregiver-registry records, orientation, training, medication-services training, and competency evaluation; staff assignment, visit notes, medication services by class, and supervision; abuse reporting to the Oregon SAFEline, incident and emergency records; and quality, survey readiness, Oregon Health Plan / APD enrollment, EVV, and reporting. Each form uses bracketed fields to customize. General information, not legal advice.",
+        bullets: [
+          "50 ready-to-use, editable forms across 6 sections, built to OAR Chapter 333, Division 536",
+          "Business, license-class, and administrator qualification records",
+          "Client rights, service agreement, assessment, and service plan forms",
+          "Caregiver background-check and registry records, orientation, training, and competency evaluation",
+          "Staff assignment, visit notes, medication services by class, and supervision",
+          "Abuse reporting to the Oregon SAFEline, plus incident and emergency records",
+          "Quality, survey readiness, Oregon Health Plan / APD enrollment, EVV, and reporting",
+          "Bracketed fields throughout so each form is quick to customize",
+        ],
       },
       {
         id: "or-referral-system",
@@ -5299,6 +5318,15 @@ const STATES = [
         slug: "or-referral-system",
         summary: "A complete referral-building system for an Oregon in-home care agency \u2014 an eleven-part playbook for earning referrals, a verified statewide directory, and named-partner target lists for Portland, Salem, Eugene, Bend, and Medford, plus the worksheets to run it week to week.",
         details: "Everything an Oregon in-home care agency needs to build a steady stream of in-home care referrals. Part One is the full playbook \u2014 an eleven-part system for earning referrals from hospitals, skilled nursing, hospices, senior communities, and the aging network. Part Two is the Oregon directory: the statewide agencies and payers every agency works with (the Oregon Health Authority, the Oregon Health Plan and APD, the Background Check Unit, the Oregon SAFEline, and the ADRC), plus verified named-partner target lists \u2014 hospitals, skilled nursing and rehab, hospices, assisted living and senior communities, and elder-law attorneys and care managers \u2014 across Oregon\u2019s five major metros. Part Three is the worksheets and tracker to run it weekly. Named partners are leads to research and qualify, not endorsements. General business guidance, not legal advice; follow all applicable anti-kickback and referral laws.",
+        bullets: [
+          "Built for the Oregon in-home care referral pathway, not generic marketing advice",
+          "Eleven-part playbook: source map, the pipeline, the legal line, scripts, and weekly rhythm",
+          "Verified directory: Oregon Health Authority, Oregon Health Plan and APD, Background Check Unit, SAFEline, and the ADRC",
+          "Named-partner target lists across Portland, Salem, Eugene, Bend, and Medford",
+          "Hospitals, skilled nursing and rehab, hospices, assisted living, elder-law attorneys, and care managers",
+          "Worksheets and a tracker to run your outreach week to week",
+          "Named partners are leads to research and qualify, not endorsements",
+        ],
       },
       {
         id: "or-home-care",
