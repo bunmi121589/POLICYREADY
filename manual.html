@@ -56,7 +56,7 @@
     const policies = manual.policies || '24 policies across 6 sections, plus appendices';
     const editionTag = manual.edition + (manual.category ? '' : ' Edition');
     // Price rule — keep in sync with api/_lib/catalog.js priceForSlug()
-    const priceDollars = (function(s){ s = String(s || ''); return (s.includes('-open-') || s.endsWith('-forms') || s.endsWith('-handbook') || s.includes('referral')) ? 200 : 500; })(manual.slug);
+    const priceDollars = (function(s){ s = String(s || ''); const overrides = { 'us-open-trucking-business': 500, 'us-open-cargo-securement': 500 }; if (Object.prototype.hasOwnProperty.call(overrides, s)) return overrides[s]; return (s.includes('-open-') || s.endsWith('-forms') || s.endsWith('-handbook') || s.includes('referral')) ? 200 : 500; })(manual.slug);
     document.title = `${manual.title} — PolicyReady.org`;
 
     document.getElementById('manualHeader').innerHTML = `
@@ -86,9 +86,8 @@
       </div>
 
       <div class="buy-sidebar">
-        <div class="buy-price">$${priceDollars}</div>
         <div class="buy-price-sub">One-time purchase · instant download</div>
-        <button class="buy-btn" id="buyBtn" onclick="checkout('${manual.slug}')">Buy Now</button>
+        <button class="buy-btn" id="buyBtn" onclick="checkout('${manual.slug}')">Buy Now &mdash; $${priceDollars}</button>
         <ul class="buy-includes">
           ${isTraining
             ? `<li>Instant PDF download</li><li>Plain-language, step by step</li><li>Both paths: through an agency or your own</li><li>Yours to keep and reuse</li>`
@@ -101,6 +100,7 @@
 
   async function checkout(slug) {
     const btn = document.getElementById('buyBtn');
+    const originalLabel = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Redirecting...';
 
@@ -116,12 +116,12 @@
       } else {
         alert('Something went wrong. Please try again.');
         btn.disabled = false;
-        btn.textContent = 'Buy Now';
+        btn.textContent = originalLabel;
       }
     } catch (err) {
       alert('Something went wrong. Please try again.');
       btn.disabled = false;
-      btn.textContent = 'Buy Now';
+      btn.textContent = originalLabel;
     }
   }
 </script>
