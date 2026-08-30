@@ -271,6 +271,7 @@ const PRODUCTS = {
 
   // ===== Trucking =====
   "us-open-trucking-business": { title: "How to Start a Trucking Business \u2014 The Federal Setup Guide", file: "How_to_Start_a_Trucking_Business_Federal_Setup_Guide.pdf" },
+  "us-open-cargo-securement": { title: "Cargo Securement \u2014 The Federal Rules", file: "Cargo_Securement_The_Federal_Rules.pdf" },
 
   // ===== How-To / Business Startup Guides =====
   "co-open-host-home": { title: "How to Open a Host Home Business in Colorado", file: "How_to_Open_a_Host_Home_Business_in_Colorado.pdf" },
