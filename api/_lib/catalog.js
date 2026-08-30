@@ -20,8 +20,17 @@ const CURRENCY = "usd";
 // A product is a $200 companion ONLY if it is a how-to guide (slug contains
 // "-open-"), a forms packet (slug ends "-forms"), or an employee handbook
 // (slug ends "-handbook"). Everything else \u2014 manuals and add-ons \u2014 is $500.
+// Explicit per-slug overrides. Checked FIRST, before the pattern rule below.
+// Use this for products whose price does not follow the healthcare tiering —
+// e.g. the trucking guides, which are full-length products despite the slug shape.
+const PRICE_OVERRIDES = {
+  "us-open-trucking-business": MANUAL_PRICE_CENTS,   // $500
+  "us-open-cargo-securement": MANUAL_PRICE_CENTS,    // $500
+};
+
 function priceForSlug(slug) {
   const s = String(slug || "");
+  if (Object.prototype.hasOwnProperty.call(PRICE_OVERRIDES, s)) return PRICE_OVERRIDES[s];
   const isCompanion = s.includes("-open-") || s.endsWith("-forms") || s.endsWith("-handbook") || s.includes("referral");
   return isCompanion ? PRICE_CENTS : MANUAL_PRICE_CENTS;
 }
